@@ -1,0 +1,94 @@
+/* Make the cow image float up and down continuously */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the cow head image */
+.cow-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+/* =============== FLOATING ANIMATION FOR THE COW HEAD =============== */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.cow-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* =============== FADE-IN + SLIDE-UP ANIMATION FOR TEXTS =============== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* Staggered delays for each element */
+.animate-delay-1 {
+  animation-delay: 0.3s;
+}
+.animate-delay-2 {
+  animation-delay: 0.6s;
+}
+.animate-delay-3 {
+  animation-delay: 0.9s;
+}
+.animate-delay-4 {
+  animation-delay: 1.2s;
+}
+
+
+
+/* =============== EAR TAG GLOW ANIMATION =============== */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0px 0 rgba(0, 255, 217, 0.304);
+    background: radial-gradient(circle, rgba(0, 255, 247, 0.245) 0%, transparent 70%);
+  }
+  50% {
+    box-shadow: 0 0 40px 15px rgba(0, 255, 234, 0.45);
+    background: radial-gradient(circle, rgba(0, 255, 234, 0.405) 0%, transparent 75%);
+  }
+  100% {
+    box-shadow: 0 0 0px 0 rgba(16, 160, 185, 0.2);
+    background: radial-gradient(circle, rgba(38, 207, 196, 0.567) 0%, transparent 70%);
+  }
+}
+
+.glow-bg {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999px;
+  filter: blur(5px);
+  animation: glowPulse 2s ease-in-out infinite;
+  z-index: 0;
+}

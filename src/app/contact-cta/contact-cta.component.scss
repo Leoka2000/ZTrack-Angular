@@ -1,0 +1,47 @@
+.contact-cta-card {
+  background-color: "#ffb787";
+  border-radius: 20px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  min-height: 280px;
+  padding: 20px 30px;
+  position: relative;
+
+}
+
+.decoration-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url('/images/decoration.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-button {
+  background-color: #2d3748 !important;
+  color: white !important;
+  border-radius: 8px !important;
+  
+  &:hover {
+    background-color: #1a202c !important;
+  }
+}
+
+::ng-deep {
+  .contact-cta-card .mat-mdc-card-content {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .decoration-image {
+    width: 40%;
+    opacity: 0.2;
+  }
+}

@@ -1,1 +1,80 @@
-<p>navbar works!</p>
+<mat-toolbar
+  style="background-color: #004f4f; height: 5rem"
+  class="flex items-center w-full justify-between px-4"
+>
+  <!-- Left: Logo and Menu Toggle -->
+  <div class="flex items-center space-x-2">
+    <button
+      mat-icon-button
+      *ngIf="showMobileToggle()"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation menu"
+      class="inline-flex text-white"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="flex items-center space-x-2">
+      <img
+        src="images/zanelogo.png"
+        class="w-18 filter invert brightness-50 h-10 rounded-full object-fit"
+      />
+    </div>
+  </div>
+
+  <!-- Center: Desktop Navigation -->
+  <nav class="hidden md:flex items-center space-x-2">
+    <a
+      *ngFor="let item of menuItems"
+      [routerLink]="item.route"
+      color="primary"
+      mat-button
+      i18n
+    >
+      <mat-icon class="text-sm">{{ item.icon }}</mat-icon>
+      <span>{{ item.label }}</span>
+    </a>
+  </nav>
+
+  <!-- Right: Action Icons -->
+  <div class="flex items-center space-x-2">
+    <button
+      mat-icon-button
+      aria-label="Shopping Cart"
+      matBadge="{{ cartCount() }}"
+      matBadgeColor="primary"
+      matBadgeSize="medium"
+      matBadgeOverlap="true"
+      color="primary"
+      class="mr-2"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+    <button mat-stroked-button color="primary">
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+
+    <!-- Register button -->
+    <button mat-flat-button color="primary">
+      <mat-icon>person_add</mat-icon>
+      <span>Register</span>
+    </button>
+  </div>
+</mat-toolbar>
+
+<!-- Mobile Menu -->
+<nav
+  *ngIf="isMenuOpen()"
+  class="lg:hidden flex flex-col bg-[#004f4f] text-white px-4 py-3 space-y-2 shadow-md"
+>
+  <a
+    *ngFor="let item of menuItems"
+    [routerLink]="item.route"
+    color="primary"
+    mat-button
+    (click)="toggleMenu()"
+  >
+    <mat-icon>{{ item.icon }}</mat-icon>
+    <span>{{ item.label }}</span>
+  </a>
+</nav>

@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from "./home/home.component"; // for icon buttons
-
+import '@angular/localize/init';
 @Component({
   selector: 'app-root',
   standalone: true,

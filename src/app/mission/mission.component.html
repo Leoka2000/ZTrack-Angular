@@ -1,0 +1,18 @@
+<div class="mission-container relative   w-full" >
+  <mat-card style="color: black; max-width: 35rem;"
+    *ngFor="let feature of features"
+    class="mission-card"
+    [ngClass]="feature.class"
+    appearance="outlined"
+  >
+    <mat-card-header >
+      <mat-icon style="color: rgb(5, 50, 53);"  mat-card-avatar>{{ feature.icon }}</mat-icon>
+      <mat-card-title style="color: black;">{{ feature.title }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p  style="color: rgb(13, 20, 41);">{{ feature.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<app-mission-intro></app-mission-intro>

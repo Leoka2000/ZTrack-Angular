@@ -1,0 +1,18 @@
+::ng-deep {
+  .mat-mdc-raised-button {
+    border-radius: 4px;
+  }
+}
+
+// Additional component-specific styles
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
