@@ -3,11 +3,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgClass, NgFor } from '@angular/common';
 import { MissionIntroComponent } from '../mission-intro/mission-intro.component';
+import { BgShadesComponent } from '../bg-shades/bg-shades.component';
 
 @Component({
   selector: 'app-mission',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, NgFor, NgClass, MissionIntroComponent],
+  imports: [MatCardModule, MatIconModule, NgFor, NgClass, MissionIntroComponent, BgShadesComponent],
   templateUrl: './mission.component.html',
   styleUrls: ['./mission.component.scss']
 })

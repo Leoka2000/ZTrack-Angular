@@ -1,23 +1,23 @@
 <footer class="footer-container">
-  <div class="footer-content w-full px-6 py-12 md:px-12 lg:px-24">
+  <div class="footer-content w-full bg-neutral-900 px-6 py-12 md:px-12 lg:px-24">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto">
       
       <!-- Logo and Description -->
       <div class="footer-section">
         <div class="logo-container mb-4">
-          <img src="/images/logo.png" alt="ZANE Systems Logo" class="footer-logo">
+          <img src="/images/zanelogo.png" alt="ZANE Systems Logo" class="footer-logo">
         </div>
-        <p class="footer-description">
+        <p class="footer-description text-neutral-200">
           The ultimate solution for livestock management and grazing.
         </p>
       </div>
 
       <!-- Navigation -->
       <div class="footer-section">
-        <h3 class="footer-heading">Navigation</h3>
+        <h3 class="footer-heading" style="color: #00dddd;">Navigation</h3>
         <ul class="footer-links">
-          <li *ngFor="let link of navigationLinks">
-            <a [href]="link.route" class="footer-link">
+          <li  *ngFor="let link of navigationLinks">
+            <a style="color: #00dddd;" [href]="link.route" class="footer-link">
               {{ link.label }}
             </a>
           </li>
@@ -26,10 +26,10 @@
 
       <!-- Information -->
       <div class="footer-section">
-        <h3 class="footer-heading">Information</h3>
+        <h3 class="footer-heading " style="color: #00dddd;">Information</h3>
         <ul class="footer-links">
           <li *ngFor="let link of informationLinks">
-            <a [href]="link.route" class="footer-link">
+            <a style="color: #00dddd;" [href]="link.route" class="footer-link">
               {{ link.label }}
             </a>
           </li>
@@ -38,7 +38,7 @@
 
       <!-- Contact -->
       <div class="footer-section">
-        <h3 class="footer-heading">Contact</h3>
+        <h3 class="footer-heading " style="color: #00dddd;">Contact</h3>
         <ul class="footer-contact">
           <li *ngFor="let contact of contactInfo" class="contact-item">
             <mat-icon class="contact-icon">{{ contact.icon }}</mat-icon>
