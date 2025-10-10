@@ -6,7 +6,7 @@
         'backdrop-filter': 'blur(25px)'
      }">
 
-  <!-- ✅ LOGO (Desktop Only) -->
+ 
   <div *ngIf="!showMobileToggle()" class="flex justify-center items-center py-4">
     <img src="images/zanelogo.png" alt="Logo" style="height: 3rem; object-fit: contain;">
   </div>
@@ -54,15 +54,10 @@
             flex-direction: column;
             border-top: 1px solid rgba(0,0,0,0.1);">
 
-  <!-- -->
-  <!-- Remove this div if you want logo completely hidden in mobile -->
-  <!--
-  <div class="flex justify-center py-4">
-    <img src="images/zanelogo.png" alt="Logo" style="height: 2.5rem; object-fit: contain;">
-  </div>
-  -->
+ 
+  
 
-  <!-- Mobile Menu Items -->
+  <!-- mobile -->
   <button mat-button *ngFor="let item of menuItems" (click)="toggleMenu()">
     <mat-icon>{{ item.icon }}</mat-icon>
     {{ item.label }}
