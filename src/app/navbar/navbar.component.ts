@@ -18,7 +18,7 @@ export class NavbarComponent {
   menuItems = [
     { label: 'Home', icon: 'home', route: '/' },
     { label: 'Shop', icon: 'shopping_cart', route: '/shop' },
-    { label: 'Services', icon: 'build', route: '/services' },
+    { label: 'Products', icon: 'build', route: '/services' },
     { label: 'About', icon: 'info', route: '/about' },
     { label: 'Contact', icon: 'contact_mail', route: '/contact' },
   ];

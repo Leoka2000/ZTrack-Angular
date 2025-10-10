@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { HomeComponent } from "./home/home.component"; // for icon buttons
+ // for icon buttons
 import '@angular/localize/init';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, MatIconModule, HomeComponent],
+  imports: [RouterOutlet, MatButtonModule, MatIconModule, HomeComponent, AboutpageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
