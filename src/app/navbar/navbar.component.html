@@ -1,3 +1,78 @@
-<mat-toolbar>
-  <span>My Application</span>
+<mat-toolbar color="primary" style="height: 4.5rem; display: flex; justify-content: space-between; font-family: nunito-custom;">
+
+  <!-- Left: Toggle Menu -->
+  <div style="display: flex; align-items: center;">
+   <button *ngIf="showMobileToggle()" 
+            mat-icon-button 
+            aria-label="Menu toggle" 
+            (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <img  src="images/zanelogo.png" alt="Logo"
+         style="height: 2.5rem; margin-left: 0.5rem; object-fit: contain;">
+  </div>
+
+  <!-- Center: Main Navigation Buttons -->
+  <!-- Center: Main Navigation Buttons (desktop only) -->
+  <div *ngIf="!showMobileToggle()" id="center-nav" style="display: flex; gap: 1rem; align-items: center;">
+    <button mat-button>
+      <mat-icon>home</mat-icon>
+      Home
+    </button>
+    <button mat-button>
+      <mat-icon>shopping_cart</mat-icon>
+      Shop
+    </button>
+    <button mat-button>
+      <mat-icon>build</mat-icon>
+      Services
+    </button>
+    <button mat-button>
+      <mat-icon>info</mat-icon>
+      About
+    </button>
+    <button mat-button>
+      <mat-icon>contact_mail</mat-icon>
+      Contact
+    </button>
+  </div>
+
+  <!-- Right: Login/Register -->
+  <div style="display: flex; gap: 0.5rem; align-items: center;">
+    <button mat-button color="accent">
+           <mat-icon>login</mat-icon>
+      Login
+    </button>
+    <button mat-flat-button color="accent">
+   <mat-icon>account_circle</mat-icon>
+      Register</button>
+  </div>
+
 </mat-toolbar>
+
+
+<!-- Mobile Menu Drawer -->
+<div *ngIf="isMenuOpen() && showMobileToggle()" 
+     style="position: absolute; top: 4.5rem; left: 0; right: 0; background: white; z-index: 1000; display: flex; flex-direction: column; border-top: 1px solid rgba(0,0,0,0.1);">
+  <button mat-button (click)="toggleMenu()">
+    <mat-icon>home</mat-icon>
+    Home
+  </button>
+  <button mat-button (click)="toggleMenu()">
+    <mat-icon>shopping_cart</mat-icon>
+    Shop
+  </button>
+  <button mat-button (click)="toggleMenu()">
+    <mat-icon>build</mat-icon>
+    Services
+  </button>
+  <button mat-button (click)="toggleMenu()">
+    <mat-icon>info</mat-icon>
+    About
+  </button>
+  <button mat-button (click)="toggleMenu()">
+    <mat-icon>contact_mail</mat-icon>
+    Contact
+  </button>
+</div>
