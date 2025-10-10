@@ -1,19 +1,18 @@
 import { NgIf, NgFor, NgStyle } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, NgIf, NgFor, NgStyle],
+  imports: [MatButtonModule, MatIconModule, NgIf, NgFor, NgStyle],
 })
 export class NavbarComponent {
   // Signals
-  isMenuOpen = signal(false);        // Mobile menu open/close
-  showMobileToggle = signal(false);  // Show mobile toggle button
+  isMenuOpen = signal(false);       
+  showMobileToggle = signal(false);  
 
   // Menu items
   menuItems = [
@@ -23,10 +22,10 @@ export class NavbarComponent {
     { label: 'About', icon: 'info', route: '/about' },
     { label: 'Contact', icon: 'contact_mail', route: '/contact' },
   ];
-
+  toggleIcon = computed(() => (this.isMenuOpen() ? 'close' : 'menu'));
   constructor() {
     if (typeof window !== 'undefined') {
-      // Detect mobile width
+   
       this.showMobileToggle.set(window.innerWidth <= 768);
 
       window.addEventListener('resize', () => {
@@ -35,7 +34,7 @@ export class NavbarComponent {
     }
   }
 
-  // Toggle mobile menu
+  
   toggleMenu() {
     this.isMenuOpen.set(!this.isMenuOpen());
   }

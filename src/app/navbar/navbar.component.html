@@ -1,29 +1,30 @@
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 h-20 flex justify-between items-center px-4 md:px-8 custom-nunito"
+     style="backdrop-filter: blur(5px); transition: background 0.3s, backdrop-filter 0.3s;"
+     [ngStyle]="{
+        'background-color': 'rgba(255, 255, 255, 0.1)',
+        'backdrop-filter': 'blur(25px)'
+     }">
 
-<nav class="fixed top-0 left-0 w-full z-50 h-20 flex  justify-between  items-center px-4 md:px-8 custom-nunito"
-     style="backdrop-filter: blur(5px);  transition: background 0.3s, backdrop-filter 0.3s;"
-      [ngStyle]="{
-        
-    'background-color': 'rgba(255, 255, 255, 0.1)',
-    'backdrop-filter': 'blur(25px)'
-  }"
->
-<div style="display: flex; justify-content: center; padding: 1rem;">
-    <img src="images/zanelogo.png" alt="Logo"
-         style="height: 3rem; object-fit: contain;">
+  <!-- ✅ LOGO (Desktop Only) -->
+  <div *ngIf="!showMobileToggle()" class="flex justify-center items-center py-4">
+    <img src="images/zanelogo.png" alt="Logo" style="height: 3rem; object-fit: contain;">
   </div>
-  <!-- Left: Toggle Menu (mobile only) -->
-  <div style="display: flex; align-items: center;">
+
+  <!-- Left: Toggle Menu (Mobile Only) -->
+  <div class="flex items-center">
     <button *ngIf="showMobileToggle()" 
-    style="color: black;"
+            style="color: black;"
             mat-icon-button 
             aria-label="Menu toggle" 
             (click)="toggleMenu()">
-      <mat-icon>menu</mat-icon>
+ <mat-icon>{{ toggleIcon() }}</mat-icon>
+
     </button>
   </div>
 
-  <!-- Center: Main Navigation Buttons (desktop only) -->
-  <div *ngIf="!showMobileToggle()" style="display: flex; gap: 1rem; align-items: center; margin-right:7rem">
+  <!-- Center: Main Navigation Buttons (Desktop Only) -->
+  <div *ngIf="!showMobileToggle()" class="flex gap-4 items-center mr-28">
     <button mat-button *ngFor="let item of menuItems">
       <mat-icon>{{ item.icon }}</mat-icon>
       {{ item.label }}
@@ -31,7 +32,7 @@
   </div>
 
   <!-- Right: Login/Register -->
-  <div style="display: flex; gap: 0.5rem; align-items: center;">
+  <div class="flex gap-2 items-center">
     <button mat-button color="accent">
       <mat-icon>login</mat-icon>
       Login
@@ -43,24 +44,23 @@
   </div>
 </nav>
 
-
-
-
 <!-- Mobile Menu Drawer with Glassy Effect -->
 <div *ngIf="isMenuOpen() && showMobileToggle()" 
-     style="position: absolute; top: 5rem; left: 0; right: 0; 
-            background: rgba(255,255,255,0.1); 
-            backdrop-filter: blur(10px); 
-            z-index: 1000; 
-            display: flex; 
-            flex-direction: column; 
+     style="position: absolute; top: 5rem; left: 0; right: 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
             border-top: 1px solid rgba(0,0,0,0.1);">
 
-  <!-- Mobile Logo -->
-  <div style="display: flex; justify-content: center; padding: 1rem;">
-    <img src="images/zanelogo.png" alt="Logo"
-         style="height: 2.5rem; object-fit: contain;">
+  <!-- -->
+  <!-- Remove this div if you want logo completely hidden in mobile -->
+  <!--
+  <div class="flex justify-center py-4">
+    <img src="images/zanelogo.png" alt="Logo" style="height: 2.5rem; object-fit: contain;">
   </div>
+  -->
 
   <!-- Mobile Menu Items -->
   <button mat-button *ngFor="let item of menuItems" (click)="toggleMenu()">
