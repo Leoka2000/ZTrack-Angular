@@ -1,7 +1,7 @@
-<div class="relative flex justify-center overflow-y-hidden gap-5 p-9 overflow-x-clip isolate w-full bg-black">
+<div class="relative  overflow-y-hidden  p-9 overflow-x-clip isolate w-full bg-black">
 
  <app-bg-shades></app-bg-shades>
-
+<div class="flex gap-5 justify-center">
   <mat-card
     style="color: black; max-width: 26rem;"
     *ngFor="let feature of features"
@@ -22,6 +22,7 @@
       <p style="color: rgb(13, 20, 41);">{{ feature.description }}</p>
     </mat-card-content>
   </mat-card>
+  </div>
 </div>
 
 <app-mission-intro></app-mission-intro>

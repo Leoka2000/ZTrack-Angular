@@ -3,11 +3,13 @@ import { MatButton, MatIconButton } from "@angular/material/button";
 import { CartButtonComponent } from '../cart-buttton/cart-buttton.component';
 import { MatIcon } from "@angular/material/icon";
 import { BgShadesComponent } from "../bg-shades/bg-shades.component";
+import { MissionComponent } from '../mission/mission.component';
+import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [MatButton, MatIconButton, CartButtonComponent, MatIcon, BgShadesComponent],
+  imports: [MatButton, MatIconButton, CartButtonComponent, MatIcon, BgShadesComponent, ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

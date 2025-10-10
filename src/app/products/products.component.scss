@@ -1,9 +1,9 @@
 .contact-cta-card {
   background-color: "#ffb787";
   border-radius: 20px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+
   min-height: 280px;
-  padding: 20px 30px;
+  padding: 20px;
   position: relative;
 
 }
@@ -25,9 +25,34 @@
   }
 }
 
+
+
+.cow-head {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+
+.cow-eartag {
+  animation: floatUpDown 4s ease-in-out infinite;
+  animation-delay: 0.2s; 
+}
+
 @media (max-width: 768px) {
   .decoration-image {
     width: 40%;
     opacity: 0.2;
   }
 }
+
+
+
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
