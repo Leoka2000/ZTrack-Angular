@@ -10,7 +10,7 @@ import { ProductsComponent } from '../../products/products.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-imports: [NavbarComponent, HeroComponent, MissionComponent, ContactCtaComponent, FooterComponent, ProductsComponent],
+imports: [NavbarComponent, HeroComponent, MissionComponent, ContactCtaComponent, FooterComponent,],
   templateUrl: './home.component.html',
  
 })
