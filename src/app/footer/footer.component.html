@@ -1,9 +1,11 @@
-<footer class="footer-container">
+<footer class="footer-container  isolate overflow-hidden relative">
+      <app-bg-shades></app-bg-shades>
   <div
     class="footer-content w-full bg-neutral-900 px-6 py-12 md:px-12 lg:px-24"
   >
+
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto relative overflow-visible isolate"
     >
       <!-- Logo and Description -->
       <div class="footer-section">
@@ -24,11 +26,7 @@
         <h3 class="footer-heading" style="color: oklch(97% 0 0)">Navigation</h3>
         <ul class="footer-links">
           <li *ngFor="let link of navigationLinks">
-            <a
-              style="color: oklch(97% 0 0)"
-              [href]="link.route"
-              class="footer-link"
-            >
+            <a style="color: #00dddd" [href]="link.route" class="footer-link">
               {{ link.label }}
             </a>
           </li>
@@ -42,11 +40,7 @@
         </h3>
         <ul class="footer-links">
           <li *ngFor="let link of informationLinks">
-            <a
-              style="color: oklch(97% 0 0)"
-              [href]="link.route"
-              class="footer-link"
-            >
+            <a style="color: #00dddd" [href]="link.route" class="footer-link">
               {{ link.label }}
             </a>
           </li>
@@ -58,28 +52,14 @@
         <h3 class="footer-heading" style="color: oklch(97% 0 0)">Contact</h3>
         <ul class="footer-contact text-white">
           <li
+            style="color: #00dddd"
             *ngFor="let contact of contactInfo"
-            class="flex items-center gap-2"
+            class="flex items-center gap-2 primary"
           >
             <mat-icon>{{ contact.icon }}</mat-icon>
-            <a [href]="contact.link">{{ contact.text }}</a>
+            <a target="_blank" [href]="contact.link">{{ contact.text }}</a>
           </li>
         </ul>
-
-        <!-- Social Media -->
-        <div class="social-links mt-6">
-          <a
-          
-            *ngFor="let social of socialLinks"
-            [href]="social.url"
-            target="_blank"
-            mat-icon-button
-            class="social-button"
-            [attr.aria-label]="social.label"
-          >
-            <mat-icon [fontIcon]="social.icon" class="social-icon material-symbols-outlined"></mat-icon>
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -103,4 +83,3 @@
     </div>
   </div>
 </footer>
-

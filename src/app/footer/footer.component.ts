@@ -1,14 +1,16 @@
 
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
-import { NgFor } from '@angular/common';
+import { NgFor, NgClass } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
+import { BgShadesComponent } from '../bg-shades/bg-shades.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatDividerModule, NgFor],
+  imports: [MatIconModule, MatButtonModule, MatDividerModule, NgFor, NgClass, BgShadesComponent],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
@@ -33,19 +35,22 @@ export class FooterComponent {
     { icon: 'location_on', text: '4521 Hajdúsámson, Heveder utca 19.', link:'https://zane.hu/' },
     { icon: 'email', text: 'sales@zane.hu', link: 'mailto:sales@zane.hu' },
     { icon: 'phone', text: '+36 30 299 7777', link: 'tel:+36302997777' },
-    { icon: 'facebook', text: '+36 30 299 7777', link: 'ZaneSystems' },
-    { icon: 'twitter', text: '+36 30 299 7777', link: 'ZaneSystems' },
-    { icon: 'linkedin', text: '+36 30 299 7777', link: 'Zane systems Kft.' }
+    { icon: 'facebook', text: 'ZaneSystems', link:'https://www.facebook.com/ZaneSystems'  },
+    { icon: 'linkedin', text: 'Twitter / X - Zane systems Kft.', link: 'https://x.com/ZaneSystems/status/1293160922815447040' }
   ];
 
-  socialLinks = [
-    { icon: 'facebook', label: 'ZaneSystems', url: '#' },
-    { icon: 'twitter', label: 'ZaneSystems', url: '#' },
-    { icon: 'linkedin', label: 'Zane systems Kft.', url: '#' }
-  ];
-
+ 
   currentYear = new Date().getFullYear();
 
-  constructor() {}
+    constructor(private matIconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon(
+      'facebook-custom',
+      this.sanitizer.bypassSecurityTrustResourceUrl('images/twitter-icon.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'linkedin-custom',
+      this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg')
+    );
+  }
 }
 

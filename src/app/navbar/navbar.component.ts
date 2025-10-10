@@ -32,6 +32,7 @@ export class NavbarComponent {
         this.showMobileToggle.set(window.innerWidth <= 768);
       });
     }
+    
   }
 
   

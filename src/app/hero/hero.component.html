@@ -1,5 +1,4 @@
-<section class="relative w-full shadow-lg overflow-hidden">
-
+<section class="w-full shadow-lg ">
   <video
     autoplay
     muted
@@ -11,7 +10,6 @@
     Your browser does not support the video tag.
   </video>
 
-
   <div class="absolute inset-0 bg-black/40"></div>
 
   <div class="xl:flex xl:justify-between items-center">
@@ -19,7 +17,7 @@
       class="relative z-10 flex items-center xl:mx-44 justify-center h-screen text-white text-center"
     >
       <div
-        class="max-w-3xl p-8 md:p-10 rounded-3xl bg-white/10 backdrop-blur-xs border border-white/20 shadow-2xl text-left"
+        class="max-w-3xl p-12 md:p-10 rounded-3xl bg-white/10 backdrop-blur-xs shadow-2xl text-left"
       >
         <app-cart-button></app-cart-button>
 
@@ -37,14 +35,14 @@
           and see their location live in a dashboard
         </p>
 
-        <div class="flex flex-wrap mt-8 gap-6">
+        <div class="flex flex-wrap mt-10 pb-8 gap-6">
           <button
             mat-flat-button
             class="animate-fade-up animate-delay-3"
             color="primary"
             style="width: 15rem; height: 3.5rem; font-size: 1.3rem"
           >
-          <mat-icon>map</mat-icon>
+            <mat-icon>map</mat-icon>
             tracker map
           </button>
           <button
@@ -59,8 +57,8 @@
       </div>
     </div>
 
-
-    <div class="flex"></div>
-    
+    <div class="flex isolate relative overflow">
+  
+    </div>
   </div>
 </section>
