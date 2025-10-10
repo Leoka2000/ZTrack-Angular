@@ -4,7 +4,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-5px);
   }
   100% {
     transform: translateY(0);
@@ -23,7 +23,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
@@ -75,7 +75,7 @@
     background: radial-gradient(circle, rgba(0, 255, 247, 0.245) 0%, transparent 70%);
   }
   50% {
-    box-shadow: 0 0 40px 15px rgba(0, 255, 234, 0.45);
+    box-shadow: 0 0 10px 10px rgba(0, 255, 234, 0.45);
     background: radial-gradient(circle, rgba(0, 255, 234, 0.405) 0%, transparent 75%);
   }
   100% {
@@ -85,10 +85,10 @@
 }
 
 .glow-bg {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 9999px;
-  filter: blur(5px);
+  filter: blur(-2rem);
   animation: glowPulse 2s ease-in-out infinite;
   z-index: 0;
 }

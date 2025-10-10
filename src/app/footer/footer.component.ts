@@ -30,9 +30,12 @@ export class FooterComponent {
   ];
 
   contactInfo = [
-    { icon: 'location_on', text: '4521 Hajdúsámson, Heveder utca 19.' },
+    { icon: 'location_on', text: '4521 Hajdúsámson, Heveder utca 19.', link:'https://zane.hu/' },
     { icon: 'email', text: 'sales@zane.hu', link: 'mailto:sales@zane.hu' },
-    { icon: 'phone', text: '+36 30 299 7777', link: 'tel:+36302997777' }
+    { icon: 'phone', text: '+36 30 299 7777', link: 'tel:+36302997777' },
+    { icon: 'facebook', text: '+36 30 299 7777', link: 'ZaneSystems' },
+    { icon: 'twitter', text: '+36 30 299 7777', link: 'ZaneSystems' },
+    { icon: 'linkedin', text: '+36 30 299 7777', link: 'Zane systems Kft.' }
   ];
 
   socialLinks = [
@@ -45,3 +48,4 @@ export class FooterComponent {
 
   constructor() {}
 }
+

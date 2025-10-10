@@ -30,9 +30,9 @@ export class MissionComponent {
     },
     {
       icon: 'lightbulb',
-      title: 'LED Lightning',
+      title: 'Activity Tracking',
       description:
-        'The green flashing LED on the device helps the farmer find the animal even in low light.',
+        'Our continuous tracking of your animal will keep you informed about the health status of that',
       class: 'led'
     }
   ];

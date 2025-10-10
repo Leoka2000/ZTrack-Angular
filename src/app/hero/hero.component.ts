@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { MatButton } from "@angular/material/button";
+import { MatButton, MatIconButton } from "@angular/material/button";
+import { CartButtonComponent } from '../cart-buttton/cart-buttton.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [MatButton],
+  imports: [MatButton, MatIconButton, CartButtonComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

@@ -7,54 +7,42 @@
     playsinline
     class="absolute top-0 left-0 w-full h-full object-cover"
   >
-    <source src="images/erath-rotating.mp4" type="video/mp4" />
+    <source src="images/hero-video.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
   <!-- Optional overlay for contrast -->
   <div class="absolute inset-0 bg-black/40"></div>
 
-  <!-- Hero content -->
-  <div
-    class="relative z-10 flex items-center justify-center h-full text-white text-center"
-  >
-    <section
-      class="relative w-full h-screen flex flex-col items-start justify-center px-8 md:px-16 bg-cover bg-center text-white"
-      style="background-image: url('assets/images/hero-bg.jpg')"
+  <div class="xl:flex xl:justify-between items-center">
+    <div
+      class="relative z-10 flex items-center xl:mx-44 justify-center h-screen text-white text-center"
     >
-      <!-- Overlay -->
-
-      <!-- Content -->
-      <div class="relative z-10 flex flex-col items-start max-w-3xl">
-        <button
-          mat-raised-button
-          color="primary"
-          class="mb-4"
-          style="width: 12rem; height: 3.5rem"
-        >
-          -40%
-        </button>
+      <div
+        class="max-w-3xl p-8 md:p-10 rounded-3xl bg-white/10 backdrop-blur-xs border border-white/20 shadow-2xl text-left"
+      >
+        <app-cart-button></app-cart-button>
 
         <h1
-          class="text-4xl md:text-6xl text-neutral-300 text-start font-extrabold animate-fade-up animate-delay-1 leading-tight mb-2"
+          class="text-4xl md:text-6xl text-neutral-100 font-extrabold animate-fade-up animate-delay-1 leading-tight mb-4"
         >
           Smart Trackers <br class="hidden md:block" />
           for Cows and Cattles
         </h1>
 
         <p
-          class="text-lg md:text-xl text-left text-gray-200 animate-fade-up animate-delay-2"
+          class="text-lg md:text-xl text-gray-200 animate-fade-up animate-delay-2 mb-6"
         >
           We take care of your cattles 24/7 <br />
           and see their location live in a dashboard
         </p>
 
-        <div class="flex flex-wrap mt-4 gap-4">
+        <div class="flex flex-wrap mt-8 gap-6">
           <button
             mat-flat-button
             class="animate-fade-up animate-delay-3"
             color="primary"
-            style="width: 12rem; height: 3.5rem; font-size: 1.3rem"
+            style="width: 15rem; height: 3.5rem; font-size: 1.3rem"
           >
             tracker map
           </button>
@@ -62,35 +50,16 @@
             mat-flat-button
             class="animate-fade-up animate-delay-3"
             color="accent"
-            style="width: 12rem; height: 3.5rem; font-size: 1.3rem"
+            style="width: 15rem; height: 3.5rem; font-size: 1.3rem"
           >
             Get started
           </button>
         </div>
       </div>
-    </section>
-
-    <div class="xl:mr-96 relative">
-      <!-- Cow Head -->
-      <img
-        src="images/cow-head.png"
-        alt="Logo"
-        class="w-[55rem] h-[55rem] relative rounded-full object-contain cow-float animate-fade-up animate-delay-4"
-      />
-
-      <img
-        src="images/cow-eartag.png"
-        alt="Logo"
-        class="h-24 w-24 absolute top-80 right-5 cow-float animate-fade-up animate-delay-4"
-      />
-      <div class="absolute top-80 right-5 flex items-center justify-center">
-        <div class="glow-bg absolute animate-delay-4 inset-0 rounded-full"></div>
-        <img
-          src="images/cow-eartag.png"
-          alt="Eartag"
-          class="h-24 w-24 relative z-10 cow-float animate-fade-up animate-delay-4"
-        />
-      </div>
     </div>
+
+    <!-- Cow Head -->
+    <div class="flex"></div>
+    <!-- VERY IMPORTANT FOR STYLING— -->
   </div>
 </section>

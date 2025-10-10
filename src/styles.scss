@@ -7,4 +7,18 @@ html, body { height: 100%; font-family: "Nunito", sans-serif!important; }
 body { margin: 0; font-family: "Nunito", sans-serif!important; }
 
 
+/* Custom color themes */
+.mission-card.realtime {
+  background-color: #00dddd; /* Material green 800 */
+}
+
+.mission-card.waterproof {
+  background-color: #ffb787 /* Material grey 800 */
+}
+
+.mission-card.led {
+  background-color: #72b3b3; /* Material green 700 */
+}
+
+
 

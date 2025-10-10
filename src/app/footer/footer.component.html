@@ -1,23 +1,34 @@
 <footer class="footer-container">
-  <div class="footer-content w-full bg-neutral-900 px-6 py-12 md:px-12 lg:px-24">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto">
-      
+  <div
+    class="footer-content w-full bg-neutral-900 px-6 py-12 md:px-12 lg:px-24"
+  >
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto"
+    >
       <!-- Logo and Description -->
       <div class="footer-section">
         <div class="logo-container mb-4">
-          <img src="/images/zanelogo.png" alt="ZANE Systems Logo" class="footer-logo">
+          <img
+            src="/images/zanelogo.png"
+            alt="ZANE Systems Logo"
+            class="footer-logo"
+          />
         </div>
-        <p class="footer-description text-neutral-200">
+        <p class="footer-description" style="color: oklch(97% 0 0)">
           The ultimate solution for livestock management and grazing.
         </p>
       </div>
 
       <!-- Navigation -->
       <div class="footer-section">
-        <h3 class="footer-heading" style="color: #00dddd;">Navigation</h3>
+        <h3 class="footer-heading" style="color: oklch(97% 0 0)">Navigation</h3>
         <ul class="footer-links">
-          <li  *ngFor="let link of navigationLinks">
-            <a style="color: #00dddd;" [href]="link.route" class="footer-link">
+          <li *ngFor="let link of navigationLinks">
+            <a
+              style="color: oklch(97% 0 0)"
+              [href]="link.route"
+              class="footer-link"
+            >
               {{ link.label }}
             </a>
           </li>
@@ -26,10 +37,16 @@
 
       <!-- Information -->
       <div class="footer-section">
-        <h3 class="footer-heading " style="color: #00dddd;">Information</h3>
+        <h3 class="footer-heading" style="color: oklch(97% 0 0)">
+          Information
+        </h3>
         <ul class="footer-links">
           <li *ngFor="let link of informationLinks">
-            <a style="color: #00dddd;" [href]="link.route" class="footer-link">
+            <a
+              style="color: oklch(97% 0 0)"
+              [href]="link.route"
+              class="footer-link"
+            >
               {{ link.label }}
             </a>
           </li>
@@ -38,46 +55,52 @@
 
       <!-- Contact -->
       <div class="footer-section">
-        <h3 class="footer-heading " style="color: #00dddd;">Contact</h3>
-        <ul class="footer-contact">
-          <li *ngFor="let contact of contactInfo" class="contact-item">
-            <mat-icon class="contact-icon">{{ contact.icon }}</mat-icon>
-            <a *ngIf="contact.link; else plainText" [href]="contact.link" class="contact-text">
-              {{ contact.text }}
-            </a>
-            <ng-template #plainText>
-              <span class="contact-text">{{ contact.text }}</span>
-            </ng-template>
+        <h3 class="footer-heading" style="color: oklch(97% 0 0)">Contact</h3>
+        <ul class="footer-contact text-white">
+          <li
+            *ngFor="let contact of contactInfo"
+            class="flex items-center gap-2"
+          >
+            <mat-icon>{{ contact.icon }}</mat-icon>
+            <a [href]="contact.link">{{ contact.text }}</a>
           </li>
         </ul>
 
         <!-- Social Media -->
         <div class="social-links mt-6">
-          <a *ngFor="let social of socialLinks" 
-             [href]="social.url" 
-             target="_blank"
-             mat-icon-button
-             class="social-button"
-             [attr.aria-label]="social.label">
-            <mat-icon [fontIcon]="social.icon" class="social-icon"></mat-icon>
+          <a
+          
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            target="_blank"
+            mat-icon-button
+            class="social-button"
+            [attr.aria-label]="social.label"
+          >
+            <mat-icon [fontIcon]="social.icon" class="social-icon material-symbols-outlined"></mat-icon>
           </a>
         </div>
       </div>
-
     </div>
   </div>
 
-  <mat-divider></mat-divider>
-
   <!-- Footer Bottom -->
-  <div class="footer-bottom w-full px-6 py-6 md:px-12 lg:px-24">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="copyright-text">
+  <div class="bg-neutral-900 w-full px-6 py-6 md:px-12 lg:px-24">
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
+    >
+      <p class="text-neutral-200">
         Copyright © 2012 - {{ currentYear }} ZANE systems Kft.
       </p>
-      <p class="webdesign-text">
-        Webdesign: <span class="webdesign-brand">Infinitag</span>
+      <p class="text-neutral-200">
+        Developed by:
+        <a
+          class="text-cyan-200 border-b border-b-cyan-200"
+          href="www.linkedin.com/in/leoreus"
+          >Leo Reus Oliveira</a
+        >
       </p>
     </div>
   </div>
 </footer>
+
