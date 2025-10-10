@@ -24,3 +24,41 @@ body { margin: 0; background-color:oklch(97% 0 0); font-family: "Nunito", sans-s
 }
 
 
+
+
+/* Glassy MatToolbar override */
+.mat-toolbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 1000;
+  font-family: nunito-custom;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Glassy effect */
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Optional: Make the buttons blend in better */
+.mat-toolbar button.mat-button,
+.mat-toolbar button.mat-icon-button,
+.mat-toolbar button.mat-flat-button {
+  background: transparent;
+  color: inherit;
+}
+
+/* Adjust height for mobile */
+@media (max-width: 768px) {
+  .mat-toolbar {
+    height: 3.5rem !important;
+    padding: 0 0.5rem;
+  }
+}

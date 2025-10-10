@@ -14,7 +14,6 @@ export class NavbarComponent {
   // Signals
   isMenuOpen = signal(false);        // Mobile menu open/close
   showMobileToggle = signal(false);  // Show mobile toggle button
-  isAtTop = signal(true);            // Detect scroll position
 
   // Menu items
   menuItems = [
@@ -32,11 +31,6 @@ export class NavbarComponent {
 
       window.addEventListener('resize', () => {
         this.showMobileToggle.set(window.innerWidth <= 768);
-      });
-
-      // Detect scroll position
-      window.addEventListener('scroll', () => {
-        this.isAtTop.set(window.scrollY === 0);
       });
     }
   }
