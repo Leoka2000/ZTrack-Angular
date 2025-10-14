@@ -5,11 +5,12 @@ import { NgClass, NgFor } from '@angular/common';
 
 import { BgShadesComponent } from '../bg-shades/bg-shades.component';
 import { MissionIntroComponent } from '../pages/home-root/mission-intro/mission-intro.component';
+import { BgShadesBottomComponent } from "../bg-shades-bottom/bg-shades-bottom.component";
 
 @Component({
   selector: 'app-mission',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, NgFor, NgClass, MissionIntroComponent, BgShadesComponent],
+  imports: [MatCardModule, MatIconModule, NgFor, NgClass, MissionIntroComponent, BgShadesComponent, BgShadesBottomComponent],
   templateUrl: './mission.component.html',
   styleUrls: ['./mission.component.scss']
 })

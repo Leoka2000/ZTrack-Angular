@@ -1,13 +1,14 @@
 <form
-  class="max-w-2xl mx-auto p-8 rounded-2xl shadow-lg flex flex-col gap-6 isolate relative overflow-hidden bg-neutral-900 text-neutral-200 border border-neutral-800"
+  class="max-w-2xl mx-auto p-8 rounded-2xl  shadow-lg flex flex-col gap-6 isolate relative overflow-hidden bg-neutral-900 text-neutral-200 border border-neutral-800"
   [formGroup]="contactForm"
   (ngSubmit)="onSubmit()"
+
   novalidate
 >
   <app-bg-shades></app-bg-shades>
   <app-bg-shades-bottom></app-bg-shades-bottom>
 
-  <!-- Full Name -->
+  
   <mat-form-field class="w-full">
     <mat-label>Full Name</mat-label>
     <input matInput formControlName="fullName" placeholder="Enter your full name" />
@@ -20,7 +21,7 @@
     </mat-error>
   </mat-form-field>
 
-  <!-- Email -->
+
   <mat-form-field class="w-full">
     <mat-label>Email Address</mat-label>
     <input matInput formControlName="email" placeholder="Enter your email" />
@@ -33,7 +34,6 @@
     </mat-error>
   </mat-form-field>
 
-  <!-- Phone -->
   <mat-form-field class="w-full">
     <mat-label>Phone Number</mat-label>
     <input matInput formControlName="phone" placeholder="Enter your phone number" />
@@ -46,7 +46,7 @@
     </mat-error>
   </mat-form-field>
 
-  <!-- Subject (Changed from Select to Text Input) -->
+
   <mat-form-field class="w-full">
     <mat-label>Subject</mat-label>
     <input matInput formControlName="subject" placeholder="Enter a subject" />
@@ -56,7 +56,7 @@
     </mat-error>
   </mat-form-field>
 
-  <!-- Message -->
+
   <mat-form-field class="w-full">
     <mat-label>Message</mat-label>
     <textarea
@@ -74,8 +74,8 @@
     </mat-error>
   </mat-form-field>
 
-  <!-- Consent Checkbox -->
-  <mat-checkbox formControlName="consent">
+
+  <mat-checkbox color="primary" formControlName="consent">
     I agree to the
     <a href="/privacy-policy" class="text-cyan-400 underline hover:text-cyan-300">
       privacy policy
@@ -85,10 +85,10 @@
     You must agree before submitting
   </mat-error>
 
-  <!-- Submit Button -->
   <button
     mat-flat-button
-    color="accent"
+
+    color="primary"
     class="w-full py-3 mt-4 text-lg font-semibold rounded-xl"
     [disabled]="contactForm.invalid"
   >

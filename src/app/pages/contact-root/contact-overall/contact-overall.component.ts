@@ -2,11 +2,15 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { NgFor } from '@angular/common';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { MatButtonModule } from '@angular/material/button';
+import { BgShadesComponent } from "../../../bg-shades/bg-shades.component";
+import { BgShadesBottomComponent } from '../../../bg-shades-bottom/bg-shades-bottom.component';
+import { MatRipple } from "@angular/material/core";
 
 @Component({
   selector: 'app-contact-overall',
   standalone: true,
-  imports: [MatIconModule, NgFor, ContactFormComponent],
+  imports: [MatIconModule, NgFor, ContactFormComponent, MatIconModule, MatButtonModule, BgShadesComponent, BgShadesBottomComponent, MatRipple],
   templateUrl: './contact-overall.component.html',
 })
 export class ContactOverallComponent {
@@ -32,12 +36,12 @@ export class ContactOverallComponent {
       link: 'https://www.facebook.com/ZaneSystems',
     },
     {
-      icon: 'twitter',
+      icon: 'close',
       text: 'ZaneSystems',
       link: 'https://twitter.com/ZaneSystems',
     },
     {
-      icon: 'linkedin',
+      icon: 'link',
       text: 'Zane systems Kft.',
       link: 'https://www.linkedin.com/company/zanesystems',
     },
