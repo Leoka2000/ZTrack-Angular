@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { BgShadesComponent } from '../bg-shades/bg-shades.component';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 
 @Component({
   selector: 'app-products',

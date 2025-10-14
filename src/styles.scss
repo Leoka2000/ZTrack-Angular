@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 html, body { height: 100%; font-family: "Nunito", sans-serif!important; }
-body { margin: 0; background-color:oklch(97% 0 0); font-family: "Nunito", sans-serif!important; }
+body { margin: 0; background-color:oklch(0% 0 0); font-family: "Nunito", sans-serif!important; }
 
 
 /* Custom color themes */
@@ -61,19 +61,5 @@ body { margin: 0; background-color:oklch(97% 0 0); font-family: "Nunito", sans-s
     height: 3.5rem !important;
     padding: 0 0.5rem;
   }
-}
-
-
-.animate-delay-1 {
-  animation-delay: 0.3s;
-}
-.animate-delay-2 {
-  animation-delay: 0.6s;
-}
-.animate-delay-3 {
-  animation-delay: 0.9s;
-}
-.animate-delay-4 {
-  animation-delay: 1.2s;
 }
 

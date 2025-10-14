@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgClass, NgFor } from '@angular/common';
-import { MissionIntroComponent } from '../mission-intro/mission-intro.component';
+
 import { BgShadesComponent } from '../bg-shades/bg-shades.component';
+import { MissionIntroComponent } from '../pages/home-root/mission-intro/mission-intro.component';
 
 @Component({
   selector: 'app-mission',

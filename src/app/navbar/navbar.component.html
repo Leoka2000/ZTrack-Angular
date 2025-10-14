@@ -1,33 +1,49 @@
-
-<nav class="fixed top-0 left-0 w-full z-50 h-20 flex justify-between items-center px-4 md:px-8 custom-nunito"
-     style="backdrop-filter: blur(5px); transition: background 0.3s, backdrop-filter 0.3s;"
-     [ngStyle]="{
-        'background-color': 'rgba(255, 255, 255, 0.1)',
-        'backdrop-filter': 'blur(25px)'
-     }">
-
+<nav
+  class="fixed top-0 left-0 w-full z-50 h-20 flex justify-between items-center px-4 md:px-8 custom-nunito"
+  style="
+    backdrop-filter: blur(5px);
+    transition: background 0.3s, backdrop-filter 0.3s;
+  "
+  [ngStyle]="{
+    'background-color': 'rgba(255, 255, 255, 0.1)',
+    'backdrop-filter': 'blur(25px)'
+  }"
+>
   <!-- LOGO  -->
-  <div *ngIf="!showMobileToggle()" class="flex justify-center items-center py-4">
-    <img src="images/zanelogo.png" alt="Logo" style="height: 3rem; object-fit: contain;">
+  <div
+    *ngIf="!showMobileToggle()"
+    class="flex justify-center items-center py-4"
+  >
+    <a class="cursor-pointer" [routerLink]="['/']">
+      <img
+        src="images/zanelogo.png"
+        alt="Logo"
+        style="height: 3rem; object-fit: contain"
+      />
+    </a>
   </div>
 
   <!-- : Toggle Menu (Mobile Only, switches icons) -->
   <div class="flex items-center">
-    <button *ngIf="showMobileToggle()" 
-            style="color: black;"
-            mat-icon-button 
-            aria-label="Menu toggle" 
-            (click)="toggleMenu()">
+    <button
+      *ngIf="showMobileToggle()"
+      style="color: black"
+      mat-icon-button
+      aria-label="Menu toggle"
+      (click)="toggleMenu()"
+    >
       <mat-icon>{{ toggleIcon() }}</mat-icon>
     </button>
   </div>
 
   <!-- : Main Navigation Buttons (Desktop Only) -->
   <div *ngIf="!showMobileToggle()" class="flex gap-4 items-center mr-28">
-    <button mat-button *ngFor="let item of menuItems">
-      <mat-icon>{{ item.icon }}</mat-icon>
-      {{ item.label }}
-    </button>
+    <a     [routerLink]="[item.route]" *ngFor="let item of menuItems"> 
+      <button mat-button>
+        <mat-icon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </button>
+    </a>
   </div>
 
   <!--Login/Register -->
@@ -44,10 +60,15 @@
 </nav>
 
 <!--  — NOW FIXED TO TOP -->
-<div *ngIf="isMenuOpen() && showMobileToggle()" 
-     class="fixed left-0 right-0 z-40 flex flex-col border-t border-black/10 transition-all duration-300"
-     style="top: 5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-
+<div
+  *ngIf="isMenuOpen() && showMobileToggle()"
+  class="fixed left-0 right-0 z-40 flex flex-col border-t border-black/10 transition-all duration-300"
+  style="
+    top: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  "
+>
   <!-- tems -->
   <button mat-button *ngFor="let item of menuItems" (click)="toggleMenu()">
     <mat-icon>{{ item.icon }}</mat-icon>

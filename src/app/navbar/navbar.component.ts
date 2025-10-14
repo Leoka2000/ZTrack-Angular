@@ -2,12 +2,13 @@ import { NgIf, NgFor, NgStyle } from '@angular/common';
 import { Component, signal, computed } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
-  imports: [MatButtonModule, MatIconModule, NgIf, NgFor, NgStyle],
+  imports: [MatButtonModule, MatIconModule, NgIf, NgFor, NgStyle,RouterLink ],
 })
 export class NavbarComponent {
   // Signals
@@ -19,7 +20,7 @@ export class NavbarComponent {
     { label: 'Home', icon: 'home', route: '/' },
     { label: 'Shop', icon: 'shopping_cart', route: '/shop' },
     { label: 'Products', icon: 'build', route: '/services' },
-    { label: 'About', icon: 'info', route: '/about' },
+    { label: 'About', icon: 'info', route: 'about' },
     { label: 'Contact', icon: 'contact_mail', route: '/contact' },
   ];
   toggleIcon = computed(() => (this.isMenuOpen() ? 'close' : 'menu'));
