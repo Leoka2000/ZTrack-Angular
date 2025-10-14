@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { NgIf } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatOptionModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
+import { BgShadesBottomComponent } from '../../../bg-shades-bottom/bg-shades-bottom.component';
 
 @Component({
   selector: 'app-contact-form',
@@ -17,17 +17,16 @@ import { MatIconModule } from '@angular/material/icon';
     NgIf,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule,
-    MatOptionModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    BgShadesComponent,
+    BgShadesBottomComponent
   ],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
-  // ✅ Explicitly type the form controls for strong typing
   contactForm: FormGroup<{
     fullName: any;
     email: any;

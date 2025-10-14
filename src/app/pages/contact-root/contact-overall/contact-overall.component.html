@@ -1,0 +1,61 @@
+<section
+  class="w-full  flex flex-col items-center"
+>
+  <!-- Header -->
+  <div class="max-w-7xl w-full mb-12">
+    <h2 class="text-4xl font-bold mb-2 text-white">Contact</h2>
+    <p class="text-gray-400">Feel free to contact us via phone or email.</p>
+  </div>
+
+  <!-- Two-column layout -->
+  <div
+    class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+  >
+    <!-- Left: Contact details -->
+    <div class="flex flex-col gap-10">
+      <!-- Phone and Email -->
+      <div *ngFor="let item of contactItems">
+        <h3 class="text-2xl font-semibold mb-3 text-white">{{ item.title }}</h3>
+        <div class="flex items-center gap-4">
+          <div
+            class="bg-green-600 rounded-full p-3 flex items-center justify-center text-white"
+          >
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </div>
+          <a
+            [href]="item.link"
+            class="text-lg text-gray-300 hover:text-green-400 transition"
+            >{{ item.text }}</a
+          >
+        </div>
+      </div>
+
+      <!-- Social links -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Follow Us</h3>
+        <div class="flex flex-col gap-4">
+          <div *ngFor="let social of socialLinks" class="flex items-center gap-4">
+            <div
+              class="bg-green-600 rounded-full p-3 flex items-center justify-center text-white"
+            >
+              <mat-icon>{{ social.icon }}</mat-icon>
+            </div>
+            <a
+              [href]="social.link"
+              target="_blank"
+              class="text-lg text-gray-300 hover:text-green-400 transition"
+              >{{ social.text }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div
+
+    >
+      <app-contact-form></app-contact-form>
+    </div>
+  </div>
+</section>

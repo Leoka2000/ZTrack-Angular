@@ -1,12 +1,14 @@
 <form
-  class="max-w-2xl mx-auto p-8 bg-neutral-900 text-neutral-200 rounded-2xl shadow-lg flex flex-col gap-6"
+  class="max-w-2xl mx-auto p-8 rounded-2xl shadow-lg flex flex-col gap-6 isolate relative overflow-hidden bg-neutral-900 text-neutral-200 border border-neutral-800"
   [formGroup]="contactForm"
   (ngSubmit)="onSubmit()"
   novalidate
 >
+  <app-bg-shades></app-bg-shades>
+  <app-bg-shades-bottom></app-bg-shades-bottom>
 
   <!-- Full Name -->
-  <mat-form-field  class="w-full">
+  <mat-form-field class="w-full">
     <mat-label>Full Name</mat-label>
     <input matInput formControlName="fullName" placeholder="Enter your full name" />
     <mat-icon matSuffix>person</mat-icon>
@@ -19,7 +21,7 @@
   </mat-form-field>
 
   <!-- Email -->
-  <mat-form-field  class="w-full">
+  <mat-form-field class="w-full">
     <mat-label>Email Address</mat-label>
     <input matInput formControlName="email" placeholder="Enter your email" />
     <mat-icon matSuffix>email</mat-icon>
@@ -32,7 +34,7 @@
   </mat-form-field>
 
   <!-- Phone -->
-  <mat-form-field  class="w-full">
+  <mat-form-field class="w-full">
     <mat-label>Phone Number</mat-label>
     <input matInput formControlName="phone" placeholder="Enter your phone number" />
     <mat-icon matSuffix>phone</mat-icon>
@@ -44,16 +46,10 @@
     </mat-error>
   </mat-form-field>
 
-  <!-- Subject -->
-  <mat-form-field  class="w-full">
+  <!-- Subject (Changed from Select to Text Input) -->
+  <mat-form-field class="w-full">
     <mat-label>Subject</mat-label>
-    <mat-select formControlName="subject">
-      <mat-option value="" disabled>Select a subject</mat-option>
-      <mat-option value="general">General Inquiry</mat-option>
-      <mat-option value="support">Support</mat-option>
-      <mat-option value="sales">Sales</mat-option>
-      <mat-option value="other">Other</mat-option>
-    </mat-select>
+    <input matInput formControlName="subject" placeholder="Enter a subject" />
     <mat-icon matSuffix>subject</mat-icon>
     <mat-error *ngIf="f.subject.touched && f.subject.hasError('required')">
       Subject is required
@@ -61,7 +57,7 @@
   </mat-form-field>
 
   <!-- Message -->
-  <mat-form-field  class="w-full">
+  <mat-form-field class="w-full">
     <mat-label>Message</mat-label>
     <textarea
       matInput
@@ -80,7 +76,10 @@
 
   <!-- Consent Checkbox -->
   <mat-checkbox formControlName="consent">
-    I agree to the <a href="/privacy-policy" class="text-cyan-400 underline hover:text-cyan-300">privacy policy</a>
+    I agree to the
+    <a href="/privacy-policy" class="text-cyan-400 underline hover:text-cyan-300">
+      privacy policy
+    </a>
   </mat-checkbox>
   <mat-error *ngIf="f.consent.touched && f.consent.hasError('required')">
     You must agree before submitting
@@ -90,11 +89,12 @@
   <button
     mat-flat-button
     color="accent"
-    class="w-full py-3 mt-4 text-lg font-semibold"
+    class="w-full py-3 mt-4 text-lg font-semibold rounded-xl"
     [disabled]="contactForm.invalid"
   >
     <mat-icon>send</mat-icon>
     Send Message
   </button>
 
+  <div class="relative isolate overflow-hidden"></div>
 </form>
