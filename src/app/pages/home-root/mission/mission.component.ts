@@ -3,9 +3,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NgClass, NgFor } from '@angular/common';
 
-import { BgShadesComponent } from '../bg-shades/bg-shades.component';
-import { MissionIntroComponent } from '../pages/home-root/mission-intro/mission-intro.component';
-import { BgShadesBottomComponent } from "../bg-shades-bottom/bg-shades-bottom.component";
+import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
+import { MissionIntroComponent } from '../mission-intro/mission-intro.component';
+import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bottom.component";
 
 @Component({
   selector: 'app-mission',
