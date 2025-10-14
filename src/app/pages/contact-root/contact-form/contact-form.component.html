@@ -1,0 +1,100 @@
+<form
+  class="max-w-2xl mx-auto p-8 bg-neutral-900 text-neutral-200 rounded-2xl shadow-lg flex flex-col gap-6"
+  [formGroup]="contactForm"
+  (ngSubmit)="onSubmit()"
+  novalidate
+>
+
+  <!-- Full Name -->
+  <mat-form-field  class="w-full">
+    <mat-label>Full Name</mat-label>
+    <input matInput formControlName="fullName" placeholder="Enter your full name" />
+    <mat-icon matSuffix>person</mat-icon>
+    <mat-error *ngIf="f.fullName.touched && f.fullName.hasError('required')">
+      Full name is required
+    </mat-error>
+    <mat-error *ngIf="f.fullName.hasError('minlength')">
+      Name must be at least 3 characters long
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field  class="w-full">
+    <mat-label>Email Address</mat-label>
+    <input matInput formControlName="email" placeholder="Enter your email" />
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="f.email.touched && f.email.hasError('required')">
+      Email is required
+    </mat-error>
+    <mat-error *ngIf="f.email.hasError('email')">
+      Please enter a valid email address
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Phone -->
+  <mat-form-field  class="w-full">
+    <mat-label>Phone Number</mat-label>
+    <input matInput formControlName="phone" placeholder="Enter your phone number" />
+    <mat-icon matSuffix>phone</mat-icon>
+    <mat-error *ngIf="f.phone.touched && f.phone.hasError('required')">
+      Phone number is required
+    </mat-error>
+    <mat-error *ngIf="f.phone.hasError('pattern')">
+      Please enter a valid phone number
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Subject -->
+  <mat-form-field  class="w-full">
+    <mat-label>Subject</mat-label>
+    <mat-select formControlName="subject">
+      <mat-option value="" disabled>Select a subject</mat-option>
+      <mat-option value="general">General Inquiry</mat-option>
+      <mat-option value="support">Support</mat-option>
+      <mat-option value="sales">Sales</mat-option>
+      <mat-option value="other">Other</mat-option>
+    </mat-select>
+    <mat-icon matSuffix>subject</mat-icon>
+    <mat-error *ngIf="f.subject.touched && f.subject.hasError('required')">
+      Subject is required
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Message -->
+  <mat-form-field  class="w-full">
+    <mat-label>Message</mat-label>
+    <textarea
+      matInput
+      rows="5"
+      formControlName="message"
+      placeholder="Type your message here..."
+    ></textarea>
+    <mat-icon matSuffix>chat</mat-icon>
+    <mat-error *ngIf="f.message.touched && f.message.hasError('required')">
+      Message is required
+    </mat-error>
+    <mat-error *ngIf="f.message.hasError('minlength')">
+      Message must be at least 10 characters long
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Consent Checkbox -->
+  <mat-checkbox formControlName="consent">
+    I agree to the <a href="/privacy-policy" class="text-cyan-400 underline hover:text-cyan-300">privacy policy</a>
+  </mat-checkbox>
+  <mat-error *ngIf="f.consent.touched && f.consent.hasError('required')">
+    You must agree before submitting
+  </mat-error>
+
+  <!-- Submit Button -->
+  <button
+    mat-flat-button
+    color="accent"
+    class="w-full py-3 mt-4 text-lg font-semibold"
+    [disabled]="contactForm.invalid"
+  >
+    <mat-icon>send</mat-icon>
+    Send Message
+  </button>
+
+</form>
