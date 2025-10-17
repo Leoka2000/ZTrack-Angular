@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { HeroComponent } from '../../../hero/hero.component';
-import { MissionComponent } from '../../../mission/mission.component';
+import { MissionComponent } from '../mission/mission.component';
 
 
 import { ProductsComponent } from '../products/products.component';

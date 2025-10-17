@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutpageComponent } from './aboutpage.component';
+import { CartBottomSheetComponent } from './cart-bottom-sheet.component';
 
-describe('AboutpageComponent', () => {
-  let component: AboutpageComponent;
-  let fixture: ComponentFixture<AboutpageComponent>;
+describe('CartBottomSheetComponent', () => {
+  let component: CartBottomSheetComponent;
+  let fixture: ComponentFixture<CartBottomSheetComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutpageComponent]
+      imports: [CartBottomSheetComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AboutpageComponent);
+    fixture = TestBed.createComponent(CartBottomSheetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

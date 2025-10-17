@@ -1,0 +1,49 @@
+<section class="w-full flex flex-col items-center isolate relative  overflow-x-clip overflow-y-visible">
+ <app-bg-shades></app-bg-shades>
+ <app-bg-shades-bottom></app-bg-shades-bottom>
+
+  <div
+    class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+  >
+    <div class="flex flex-col gap-10">
+      <div *ngFor="let item of contactItems">
+        <h3 class="text-2xl font-semibold mb-3 text-white">{{ item.title }}</h3>
+        <div class="flex items-center gap-4">
+               <a [href]="item.link" target="_blank" class="text-gray-300 hover:underline">
+          <button mat-mini-fab color="primary" aria-label="Contact icon">
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </button>
+</a>
+          <a [href]="item.link" class="text-gray-300 hover:underline">
+            {{ item.text }}
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Follow Us</h3>
+        <div class="flex flex-col gap-4">
+          <div
+            *ngFor="let social of socialLinks"
+            class="flex items-center gap-4"
+          >
+                 <a [href]="social.link" target="_blank" class="text-gray-300 hover:underline">
+            <button mat-mini-fab color="primary" aria-label="Social icon">
+              <mat-icon>{{ social.icon }}</mat-icon>
+            </button>
+                    </a>
+
+     <a [href]="social.link" target="_blank" class="text-gray-300 hover:underline">
+              {{ social.text }}
+     </a>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <app-contact-form></app-contact-form>
+    </div>
+  </div>
+</section>

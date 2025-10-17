@@ -9,7 +9,7 @@
     'backdrop-filter': 'blur(25px)'
   }"
 >
-  <!-- LOGO  -->
+
   <div
     *ngIf="!showMobileToggle()"
     class="flex justify-center items-center py-4"
@@ -23,7 +23,6 @@
     </a>
   </div>
 
-  <!-- : Toggle Menu (Mobile Only, switches icons) -->
   <div class="flex items-center">
     <button
       *ngIf="showMobileToggle()"
@@ -36,7 +35,7 @@
     </button>
   </div>
 
-  <!-- : Main Navigation Buttons (Desktop Only) -->
+ 
   <div *ngIf="!showMobileToggle()" class="flex gap-4 items-center mr-28">
     <a     [routerLink]="[item.route]" *ngFor="let item of menuItems"> 
       <button mat-button>
@@ -46,7 +45,6 @@
     </a>
   </div>
 
-  <!--Login/Register -->
   <div class="flex gap-2 items-center">
     <button mat-button color="accent">
       <mat-icon>login</mat-icon>
@@ -59,7 +57,7 @@
   </div>
 </nav>
 
-<!--  — NOW FIXED TO TOP -->
+
 <div
   *ngIf="isMenuOpen() && showMobileToggle()"
   class="fixed left-0 right-0 z-40 flex flex-col border-t border-black/10 transition-all duration-300"
@@ -69,7 +67,7 @@
     backdrop-filter: blur(10px);
   "
 >
-  <!-- tems -->
+
   <button mat-button *ngFor="let item of menuItems" (click)="toggleMenu()">
     <mat-icon>{{ item.icon }}</mat-icon>
     {{ item.label }}
