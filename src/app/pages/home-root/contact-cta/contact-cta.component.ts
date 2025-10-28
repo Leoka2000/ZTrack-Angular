@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-contact-cta',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, BgShadesComponent],
+  imports: [MatCardModule, MatButtonModule, BgShadesComponent, MatIconModule],
   templateUrl: './contact-cta.component.html',
   styleUrls: ['./contact-cta.component.scss']
 })

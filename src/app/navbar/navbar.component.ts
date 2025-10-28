@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   imports: [MatButtonModule, MatIconModule, NgIf, NgFor, NgStyle,RouterLink ],
 })
 export class NavbarComponent {
-  // Signals
+
   isMenuOpen = signal(false);       
   showMobileToggle = signal(false);  
 
@@ -22,6 +22,7 @@ export class NavbarComponent {
     { label: 'Products', icon: 'build', route: '/services' },
     { label: 'About', icon: 'info', route: '/about' },
     { label: 'Contact', icon: 'contact_mail', route: '/contact' },
+    { label: 'Blog', icon: 'article_person', route: '/blog' },
   ];
   toggleIcon = computed(() => (this.isMenuOpen() ? 'close' : 'menu'));
   constructor() {

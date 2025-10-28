@@ -48,3 +48,9 @@ padding: 1.8rem 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+
+.mission-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
