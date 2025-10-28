@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgClass, NgFor } from '@angular/common';
 
 import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
-import { MissionIntroComponent } from '../mission-intro/mission-intro.component';
+
 import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bottom.component";
 import { MatButtonModule } from '@angular/material/button';
 
@@ -37,25 +37,15 @@ import { MatButtonModule } from '@angular/material/button';
 export class MissionComponent implements AfterViewInit {
   features = [
     {
-      icon: 'query_stats',
-      title: 'Real-time',
-      description:
-        'The location and movement data of the animals can be tracked in real time thanks to the latest GPS technology.',
-      class: 'realtime',
+     card: '1',
     },
     {
-      icon: 'shield',
-      title: 'Waterproof',
-      description:
-        'The ear tag is completely waterproof, so it is completely resistant to all weather conditions.',
-      class: 'waterproof',
+      card: '2',
+      
     },
     {
-      icon: 'lightbulb',
-      title: 'Activity Tracking',
-      description:
-        'Our continuous tracking of your animal will keep you informed about the health status of that',
-      class: 'led',
+      card: '3',
+      
     },
   ];
 

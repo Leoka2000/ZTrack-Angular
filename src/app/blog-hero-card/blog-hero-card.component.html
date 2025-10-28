@@ -1,18 +1,28 @@
-<mat-card class="mat-elevation-z4" style="max-width: 400px; margin: auto; text-align: left;  background-color: var(--mdc-elevated-card-container-color, #fff);
-    color: var(--mdc-theme-on-surface, #000);">
-  <img
-    mat-card-image
-    src="images/elveszett-borju.png"
-    alt="Blog preview"
-  />
-  <mat-card-content >
-    <h4 class="text-neutral-200" style="margin-top: 0.5rem!important;">The story of the lost calf</h4>
-    <p class="text-neutral-200">A few years ago, we started developing GPS-enabled cattle ear tags. After the first few prototypes were completed,...</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <a style="width: 100%; margin: 0.5rem 0;" mat-raised-button color="primary" (click)="goToBlog()">
-     <mat-icon>article_person</mat-icon>
-      Visit Blog
-    </a>
-  </mat-card-actions>
-</mat-card>
+<div class="w-full flex justify-center">
+  <div class="blog-card max-w-sm isolate relative bg-neutral-950 shadow-lg rounded-xl overflow-hidden">
+    <app-bg-shades></app-bg-shades>
+
+    <!-- Image -->
+    <img src="images/elveszett-borju.png" alt="Blog preview" class="w-full h-auto object-cover" />
+
+    <!-- Card Content -->
+    <div class="p-6">
+      <p class="text-gray-200 text-2xl mb-2">
+        The story of the lost calf
+      </p>
+      <p class="text-gray-200 text-sm">
+        A few years ago, we started developing GPS-enabled cattle ear tags.
+        After the first few prototypes were completed, ...
+      </p>
+    </div>
+
+    <!-- Card Actions -->
+    <div class="px-6 pb-6">
+      <button mat-raised-button color="primary" class="w-full flex items-center justify-center">
+        <mat-icon>article_person</mat-icon>
+        Visit Blog
+      </button>
+    </div>
+    
+  </div>
+</div>

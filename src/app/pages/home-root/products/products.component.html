@@ -1,50 +1,28 @@
 <div class="w-full relative isolate overflow-x-clip py-16">
   <app-bg-shades></app-bg-shades>
-  <div
-    class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto"
-  >
-    <!-- Left Image (was Right) -->
-    <div class="order-last lg:order-first">
-      <!-- Left Image (was Right) -->
-      <div class="order-last lg:order-first">
-        <div
-          class="rounded-3xl border-2 relative isolate overflow-visible border-1 border-cyan-950  shadow-md "
 
-        >
-      
-          <img
-            src="/images/cow-head.png"
-            alt="Cows grazing on hillside"
-            class="w-full h-auto object-cover cow-head"
-          />
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
 
-          <app-bg-shades></app-bg-shades>
-
-          <img
-            src="/images/cow-eartag.png"
-            alt="Cows eartag"
-            class="w-24 h-24 absolute right-[3rem] top-[13rem] object-contain cow-eartag"
-          />
-        </div>
+    <!-- Left Image -->
+    <div class="order-last lg:order-first product-image" style="opacity: 0; transform: translateY(50px);">
+      <div class="rounded-3xl border-2 relative isolate overflow-visible border-1 border-cyan-950 shadow-md">
+        <img src="/images/cow-head.png" alt="Cows grazing on hillside" class="w-full h-auto object-cover cow-head"/>
+        <app-bg-shades></app-bg-shades>
+        <img src="/images/cow-eartag.png" alt="Cows eartag" class="w-24 h-24 absolute right-[3rem] top-[13rem] object-contain cow-eartag"/>
       </div>
     </div>
 
-    <!-- Right Content (was Left) -->
-    <div class="space-y-6 order-first lg:order-last">
+    <!-- Right Content -->
+    <div class="space-y-6 right-content order-first lg:order-last">
+
       <div class="space-y-2 animate-delay-2">
-        <p
-          class="text-sm font-medium tracking-wide uppercase"
-          style="color: oklch(70.8% 0 0)"
-        >
-          Introducing our Proucts
+        <p class="text-sm font-medium tracking-wide uppercase" style="color: oklch(70.8% 0 0); opacity:0; transform: translateY(50px);">
+          Introducing our Products
         </p>
       </div>
 
-      <div
-        class="space-y-4 text-base md:text-lg  "
-        style="color: oklch(92.2% 0 0); line-height: 1.5"
-      >
-        <p>
+      <div class="space-y-4 text-base md:text-lg" style="color: oklch(92.2% 0 0); line-height: 1.5;">
+        <p style="opacity:0; transform: translateY(50px);">
           Gone are the days of <strong>laborious manual tracking</strong> and
           monitoring of your herd. Our <strong>GPS eartag</strong> allows you to
           easily and accurately track your cattle’s location and activity,
@@ -52,7 +30,7 @@
           <strong>improve your farm’s efficiency</strong> and profitability.
         </p>
 
-        <p>
+        <p style="opacity:0; transform: translateY(50px);">
           This state-of-the-art ear tag utilizes
           <strong>cutting-edge GPS technology</strong> to deliver real-time
           location and movement data straight to your device. With the ability
@@ -61,7 +39,7 @@
           <strong>theft or loss</strong>.
         </p>
 
-        <p>
+        <p style="opacity:0; transform: translateY(50px);">
           Our GPS eartags are designed to be
           <strong>durable and long-lasting</strong>, ensuring they withstand
           even the toughest conditions. Plus, they are
@@ -69,7 +47,7 @@
           humane and practical option for livestock management.
         </p>
 
-        <p>
+        <p style="opacity:0; transform: translateY(50px);">
           Not only does our GPS eartag help with monitoring and security, but it
           also aids in <strong>animal health management</strong>. With access to
           real-time data on your cattle’s activity levels, you can quickly
@@ -77,35 +55,26 @@
           <strong>health issues</strong> and take appropriate action.
         </p>
 
-        <p>
+        <p style="opacity:0; transform: translateY(50px);">
           Investing in our GPS eartag for your cattle will save you
           <strong>time, money, and worry</strong>. Experience the benefits of
           modern livestock management today – order your GPS eartags now and
           take your farming operation to the next level!
         </p>
 
-        <p class="isolate relative overflow-clip">
-          
+        <p class="isolate relative overflow-clip" style="opacity:0; transform: translateY(50px);">
           The <strong>strong green flashing LED</strong> on the device helps the
           farmer find the animal even in <strong>low light</strong>.
         </p>
       </div>
 
       <div class="pt-4">
-        <button
-          mat-raised-button
-          color="primary"
-          style="
-            border-radius: 55px;
-            font-size: 1.25rem;
-            padding: 30px 0;
-            width: 100%;
-          "
-        >
+        <button mat-raised-button color="primary" style="border-radius: 55px; font-size: 1.25rem; padding: 30px 0; width: 100%; opacity:0; transform: translateY(50px);">
           <mat-icon>precision_manufacturing</mat-icon>
           Our products
         </button>
       </div>
+
     </div>
   </div>
 </div>
