@@ -12,6 +12,7 @@ import { NgClass, NgFor } from '@angular/common';
 import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 import { MissionIntroComponent } from '../mission-intro/mission-intro.component';
 import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bottom.component";
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-mission',
@@ -19,9 +20,7 @@ import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bot
   imports: [
     MatCardModule,
     MatIconModule,
-    NgFor,
-    NgClass,
-    MissionIntroComponent,
+  MatButtonModule,
     BgShadesComponent,
     BgShadesBottomComponent,
   ],
