@@ -1,17 +1,19 @@
-<section class="w-full py-20 px-6 isolate overflow-x-clip relative">
+<section class="w-full py-20 px-6 isolate z-10 overflow-x-clip relative">
+  <span class="absolute -z-30 -bottom-0 -right-64 opacity-30">
+    <svg width="400" height="400" viewBox="0 0 590 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="294.897" cy="294.897" r="293.332" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+      <path d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+      <path d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+    </svg>
+  </span>
   <app-bg-shades></app-bg-shades>
-  <!-- Heading -->
   <div class="max-w-7xl mx-auto text-center mb-12">
     <h2 class="text-4xl md:text-5xl font-extrabold text-neutral-300">
       Our areas of <span class="text-cyan-300">expertise</span>
     </h2>
   </div>
-
-  <!-- Grid -->
   <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-w-7xl mx-auto">
-
-    <!-- Card 1 -->
-    <div class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
+    <div [@fadeInUp]="cardStates[0]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
       <app-bg-shades></app-bg-shades>
       <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip" />
       <div class="mb-2">
@@ -26,9 +28,7 @@
         sector.
       </p>
     </div>
-
-    <!-- Card 2 -->
-    <div class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
+    <div [@fadeInUp]="cardStates[1]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
       <app-bg-shades></app-bg-shades>
       <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip" />
       <div class="mb-2">
@@ -43,9 +43,7 @@
         electronics.
       </p>
     </div>
-
-    <!-- Card 3 -->
-    <div class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
+    <div [@fadeInUp]="cardStates[2]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
       <app-bg-shades></app-bg-shades>
       <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip" />
       <div class="mb-2">
@@ -59,9 +57,7 @@
         of our work — the design of the printed circuits.
       </p>
     </div>
-
-    <!-- Card 4 -->
-    <div class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
+    <div [@fadeInUp]="cardStates[3]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
       <app-bg-shades></app-bg-shades>
       <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip" />
       <div class="mb-2">
@@ -76,9 +72,7 @@
         and production needs.
       </p>
     </div>
-
-    <!-- Card 5 -->
-    <div class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
+    <div [@fadeInUp]="cardStates[4]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
       <app-bg-shades></app-bg-shades>
       <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip" />
       <div class="mb-2">
@@ -92,6 +86,5 @@
         algorithms, ensuring our devices assist in many areas of life.
       </p>
     </div>
-
   </div>
 </section>
