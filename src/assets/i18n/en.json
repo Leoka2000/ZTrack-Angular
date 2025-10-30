@@ -68,6 +68,35 @@
     "CARD4_DESC": "With our 120W CO₂ laser cutter and 30W fiber laser engraver, we are equipped to offer a wide range of services to meet your customization and production needs.",
     "CARD5_TITLE": "Embedded software development",
     "CARD5_DESC": "During embedded development, we provide our circuits with clever algorithms, ensuring our devices assist in many areas of life."
+  },
+  "footer": {
+    "DESCRIPTION": "The ultimate solution for livestock management and grazing.",
+    "NAVIGATION": {
+      "TITLE": "Navigation",
+      "HOME": "Homepage",
+      "SHOP": "Shop",
+      "ABOUT": "About us",
+      "BLOG": "Blog",
+      "SUPPORT": "Support",
+      "MAP": "Map Application"
+    },
+    "INFORMATION": {
+      "TITLE": "Information",
+      "PRIVACY": "Privacy Policy",
+      "TERMS": "Terms & Conditions",
+      "CERTIFICATION": "Certification",
+      "QUALITY": "Quality Policy"
+    },
+    "CONTACT": {
+      "TITLE": "Contact",
+      "ADDRESS": "4521 Hajdúsámson, Heveder utca 19.",
+      "EMAIL": "sales@zane.hu",
+      "PHONE": "+36 30 299 7777",
+      "FACEBOOK": "ZaneSystems",
+      "LINKEDIN": "Twitter / X - Zane systems Kft."
+    },
+    "COPYRIGHT": "Copyright © 2012 - {{currentYear}} ZANE systems Kft.",
+    "DEVELOPER": "Developed by: Leo Reus Oliveira"
   }
 
 }

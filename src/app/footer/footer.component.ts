@@ -6,11 +6,12 @@ import { MatDividerModule } from '@angular/material/divider';
 import { NgFor, NgClass } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BgShadesComponent } from '../bg-shades/bg-shades.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatDividerModule, NgFor, NgClass, BgShadesComponent],
+  imports: [MatIconModule, MatButtonModule, MatDividerModule, NgFor, NgClass, BgShadesComponent, TranslateModule],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

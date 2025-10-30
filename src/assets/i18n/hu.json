@@ -68,5 +68,34 @@
     "CARD4_DESC": "120W-os CO₂ lézervágónkkal és 30W-os fiber lézer gravírozónkkal széles körű szolgáltatásokat kínálunk, hogy kielégítsük testreszabási és gyártási igényeit.",
     "CARD5_TITLE": "Beágyazott szoftverfejlesztés",
     "CARD5_DESC": "Beágyazott fejlesztés során áramköreinket intelligens algoritmusokkal látjuk el, biztosítva, hogy eszközeink sok területen segítsenek."
+  },
+  "footer": {
+    "DESCRIPTION": "A legjobb megoldás az állattenyésztés és legeltetés kezelésére.",
+    "NAVIGATION": {
+      "TITLE": "Navigáció",
+      "HOME": "Főoldal",
+      "SHOP": "Bolt",
+      "ABOUT": "Rólunk",
+      "BLOG": "Blog",
+      "SUPPORT": "Támogatás",
+      "MAP": "Térképes alkalmazás"
+    },
+    "INFORMATION": {
+      "TITLE": "Információ",
+      "PRIVACY": "Adatvédelmi irányelvek",
+      "TERMS": "Általános Szerződési Feltételek",
+      "CERTIFICATION": "Tanúsítvány",
+      "QUALITY": "Minőségpolitika"
+    },
+    "CONTACT": {
+      "TITLE": "Kapcsolat",
+      "ADDRESS": "4521 Hajdúsámson, Heveder utca 19.",
+      "EMAIL": "sales@zane.hu",
+      "PHONE": "+36 30 299 7777",
+      "FACEBOOK": "ZaneSystems",
+      "LINKEDIN": "Twitter / X - Zane systems Kft."
+    },
+    "COPYRIGHT": "Copyright © 2012 - {{currentYear}} ZANE systems Kft.",
+    "DEVELOPER": "Fejlesztette: Leo Reus Oliveira"
   }
 }

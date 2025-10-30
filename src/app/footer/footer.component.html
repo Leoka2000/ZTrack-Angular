@@ -1,85 +1,77 @@
-<footer class="footer-container  isolate overflow-hidden relative">
-      <app-bg-shades></app-bg-shades>
-  <div
-    class="footer-content w-full bg-neutral-900 px-6 py-12 md:px-12 lg:px-24"
-  >
+<footer class="footer-container isolate overflow-hidden relative">
+  <app-bg-shades></app-bg-shades>
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto relative overflow-visible isolate"
-    >
-  
+  <div class="footer-content w-full bg-neutral-900 px-6 py-12 md:px-12 lg:px-24">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto relative overflow-visible isolate">
+
+      <!-- Logo & Description -->
       <div class="footer-section">
         <div class="logo-container mb-4">
-          <img
-            src="/images/zanelogo.png"
-            alt="ZANE Systems Logo"
-            class="footer-logo"
-            style=" filter:  brightness(0) invert(1);"
-          />
+          <img src="/images/zanelogo.png" alt="ZANE Systems Logo" class="footer-logo" style="filter: brightness(0) invert(1);" />
         </div>
-        <p class="footer-description" style="color: oklch(97% 0 0)">
-          The ultimate solution for livestock management and grazing.
-        </p>
+        <p class="footer-description" style="color: oklch(97% 0 0)" [innerHTML]="'footer.DESCRIPTION' | translate"></p>
       </div>
 
-      
+      <!-- Navigation -->
       <div class="footer-section">
-        <h3 class="footer-heading" style="color: oklch(97% 0 0)">Navigation</h3>
+        <h3 class="footer-heading" style="color: oklch(97% 0 0)" [innerHTML]="'footer.NAVIGATION.TITLE' | translate"></h3>
         <ul class="footer-links">
-          <li *ngFor="let link of navigationLinks">
-            <a style="color: #00dddd" [href]="link.route" class="footer-link">
-              {{ link.label }}
-            </a>
-          </li>
+          <li><a style="color: #00dddd" href="/" class="footer-link" [innerHTML]="'footer.NAVIGATION.HOME' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/shop" class="footer-link" [innerHTML]="'footer.NAVIGATION.SHOP' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/about" class="footer-link" [innerHTML]="'footer.NAVIGATION.ABOUT' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/blog" class="footer-link" [innerHTML]="'footer.NAVIGATION.BLOG' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/support" class="footer-link" [innerHTML]="'footer.NAVIGATION.SUPPORT' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/map" class="footer-link" [innerHTML]="'footer.NAVIGATION.MAP' | translate"></a></li>
         </ul>
       </div>
 
+      <!-- Information -->
       <div class="footer-section">
-        <h3 class="footer-heading" style="color: oklch(97% 0 0)">
-          Information
-        </h3>
+        <h3 class="footer-heading" style="color: oklch(97% 0 0)" [innerHTML]="'footer.INFORMATION.TITLE' | translate"></h3>
         <ul class="footer-links">
-          <li *ngFor="let link of informationLinks">
-            <a style="color: #00dddd" [href]="link.route" class="footer-link">
-              {{ link.label }}
-            </a>
-          </li>
+          <li><a style="color: #00dddd" href="/privacy" class="footer-link" [innerHTML]="'footer.INFORMATION.PRIVACY' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/terms" class="footer-link" [innerHTML]="'footer.INFORMATION.TERMS' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/certification" class="footer-link" [innerHTML]="'footer.INFORMATION.CERTIFICATION' | translate"></a></li>
+          <li><a style="color: #00dddd" href="/quality" class="footer-link" [innerHTML]="'footer.INFORMATION.QUALITY' | translate"></a></li>
         </ul>
       </div>
 
-  
+      <!-- Contact -->
       <div class="footer-section">
-        <h3 class="footer-heading" style="color: oklch(97% 0 0)">Contact</h3>
+        <h3 class="footer-heading" style="color: oklch(97% 0 0)" [innerHTML]="'footer.CONTACT.TITLE' | translate"></h3>
         <ul class="footer-contact text-white">
-          <li
-            style="color: #00dddd"
-            *ngFor="let contact of contactInfo"
-            class="flex items-center gap-2 primary"
-          >
-            <mat-icon>{{ contact.icon }}</mat-icon>
-            <a target="_blank" [href]="contact.link">{{ contact.text }}</a>
+          <li class="flex items-center gap-2 primary" style="color: #00dddd">
+            <mat-icon>location_on</mat-icon>
+            <a target="_blank" href="https://zane.hu/" [innerHTML]="'footer.CONTACT.ADDRESS' | translate"></a>
+          </li>
+          <li class="flex items-center gap-2 primary" style="color: #00dddd">
+            <mat-icon>email</mat-icon>
+            <a target="_blank" href="mailto:sales@zane.hu" [innerHTML]="'footer.CONTACT.EMAIL' | translate"></a>
+          </li>
+          <li class="flex items-center gap-2 primary" style="color: #00dddd">
+            <mat-icon>phone</mat-icon>
+            <a target="_blank" href="tel:+36302997777" [innerHTML]="'footer.CONTACT.PHONE' | translate"></a>
+          </li>
+          <li class="flex items-center gap-2 primary" style="color: #00dddd">
+            <mat-icon>facebook</mat-icon>
+            <a target="_blank" href="https://www.facebook.com/ZaneSystems" [innerHTML]="'footer.CONTACT.FACEBOOK' | translate"></a>
+          </li>
+          <li class="flex items-center gap-2 primary" style="color: #00dddd">
+            <mat-icon>linkedin</mat-icon>
+            <a target="_blank" href="https://x.com/ZaneSystems/status/1293160922815447040" [innerHTML]="'footer.CONTACT.LINKEDIN' | translate"></a>
           </li>
         </ul>
       </div>
+
     </div>
   </div>
 
- 
+  <!-- Copyright -->
   <div class="bg-neutral-900 w-full px-6 py-6 md:px-12 lg:px-24">
-    <div
-      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
-    >
-      <p class="text-neutral-200">
-        Copyright © 2012 - {{ currentYear }} ZANE systems Kft.
-      </p>
-      <p class="text-neutral-200">
-        Developed by:
-        <a
-          class="text-cyan-200 border-b border-b-cyan-200"
-        
-          >Leo Reus Oliveira</a
-        >
-      </p>
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-neutral-200" [innerHTML]="'footer.COPYRIGHT' | translate: { currentYear: currentYear }"></p>
+      <p class="text-neutral-200" [innerHTML]="'footer.DEVELOPER' | translate"></p>
     </div>
   </div>
 </footer>
