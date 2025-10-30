@@ -1,0 +1,73 @@
+{
+  "HELLO": "Hello world!",
+  "CHANGE_LANG": "Change language",
+  "navbar": {
+    "HOME": "Home",
+    "SHOP": "Shop",
+    "ABOUT": "About",
+    "CONTACT": "Contact",
+    "BLOG": "Blog",
+    "LOGIN": "Login",
+    "REGISTER": "Register"
+  },
+  "hero": {
+    "EXPLORE_BUTTON": "Explore our Products",
+    "TITLE": "Smart Trackers for Cows and Cattles",
+    "SUBTITLE": "We take care of your cattles 24/7 and see their location live in a dashboard",
+    "TRACKER_MAP": "Tracker Map",
+    "GET_STARTED": "Get Started"
+  },
+  "mission": {
+    "REALTIME_TITLE": "Real-time",
+    "REALTIME_DESC": "The location and movement data of the animals can be tracked in real time thanks to the latest GPS technology.",
+    "WATERPROOF_TITLE": "Waterproof",
+    "WATERPROOF_DESC": "The ear tag is completely waterproof, so it is completely resistant to all weather conditions.",
+    "ACTIVITY_TITLE": "Activity Tracking",
+    "ACTIVITY_DESC": "Our continuous tracking of your animal will keep you informed about the health status of that."
+  },
+  "farmAbout": {
+    "INTRO": "Introducing zTag smart grazing",
+    "TITLE": "Our mission",
+    "PARAGRAPH1": "The <strong>grazed animals</strong> feel much <strong>better outdoors</strong>, develop more beautifully, and are healthier. It is in everyone's interest to <strong>sustain grazing</strong> as much as possible worldwide.",
+    "PARAGRAPH2": "This is significant not only from the perspective of animal health but also in terms of landscape maintenance and preserving biodiversity.",
+    "PARAGRAPH3": "Modern technologies should be utilized in grazing as well. Using <strong>GPS satellites</strong>, we can track the movement of animals, and from sensor data, we can check their activity, <strong>health</strong> status, nutrition, or even their reproductive period. We are developing sophisticated sensors that animals can comfortably wear in their ears, allowing us to continuously monitor and ensure the safety of our livestock.",
+    "BUTTON": "About us"
+  },
+  "products": {
+    "INTRO": "Introducing our Products",
+    "TITLE": "Our products",
+    "PARAGRAPH1": "Gone are the days of <strong>laborious manual tracking</strong> and monitoring of your herd. Our <strong>GPS eartag</strong> allows you to easily and accurately track your cattle’s location and activity, providing you with valuable insights that can help <strong>improve your farm’s efficiency</strong> and profitability.",
+    "PARAGRAPH2": "This state-of-the-art ear tag utilizes <strong>cutting-edge GPS technology</strong> to deliver real-time location and movement data straight to your device. With the ability to track your cattle’s whereabouts, you can ensure their <strong>safety</strong> and prevent any potential <strong>theft or loss</strong>.",
+    "PARAGRAPH3": "Our GPS eartags are designed to be <strong>durable and long-lasting</strong>, ensuring they withstand even the toughest conditions. Plus, they are <strong>comfortable for the cattle to wear</strong>, making them a humane and practical option for livestock management.",
+    "PARAGRAPH4": "Not only does our GPS eartag help with monitoring and security, but it also aids in <strong>animal health management</strong>. With access to real-time data on your cattle’s activity levels, you can quickly identify any <strong>abnormal behavior</strong> or <strong>health issues</strong> and take appropriate action.",
+    "PARAGRAPH5": "Investing in our GPS eartag for your cattle will save you <strong>time, money, and worry</strong>. Experience the benefits of modern livestock management today – order your GPS eartags now and take your farming operation to the next level!",
+    "PARAGRAPH6": "The <strong>strong green flashing LED</strong> on the device helps the farmer find the animal even in <strong>low light</strong> conditions.",
+    "BUTTON": "Our products"
+  },
+   "contactCta": {
+    "TITLE": "Are you interested?",
+    "DESCRIPTION": "Contact us if you have any questions or would like to request a unique offer.",
+    "BUTTON": "Send an enquire"
+  },
+  "aboutHouse": {
+    "TITLE": "About us",
+    "PARA1": "<strong>ZANE systems Limited Liability</strong> Company was founded in <strong>2012</strong> by electrical engineer <strong>Zoltán Erdei</strong>.",
+    "PARA2": "The company was established to meet the needs of foreign and domestic circuit design. Accordingly, the main activity of the company from the very beginning is the production of electronic circuit boards and electronic design.",
+    "PARA3": "Creating a design office capable of designing world-class electronic products played a very important role in founding the company.",
+    "PARA4": "Our mission is to show that Hungarian electronics professionals can stand their ground not only in electronics contract manufacturing, but also in design."
+  },
+   "expertise": {
+    "TITLE": "Our areas of <span class='text-cyan-300'>expertise</span>",
+    "CARD1_TITLE": "PLC controls",
+    "CARD1_DESC": "We specialize in providing cutting-edge programmable logic controller (PLC) solutions tailored to the unique needs of the custom machines sector.",
+    "CARD2_TITLE": "Circuit diagram",
+    "CARD2_DESC": "We have more than ten years of experience in designing high-speed, RF, and analog circuits, power supplies, and complex, high-integration electronics.",
+    "CARD3_TITLE": "Printed circuit board design",
+    "CARD3_DESC": "Following the circuit diagram design is one of the most important parts of our work — the design of the printed circuits.",
+    "CARD4_TITLE": "Laser cutting and engraving",
+    "CARD4_DESC": "With our 120W CO₂ laser cutter and 30W fiber laser engraver, we are equipped to offer a wide range of services to meet your customization and production needs.",
+    "CARD5_TITLE": "Embedded software development",
+    "CARD5_DESC": "During embedded development, we provide our circuits with clever algorithms, ensuring our devices assist in many areas of life."
+  }
+
+}

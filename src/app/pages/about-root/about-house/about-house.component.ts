@@ -6,11 +6,12 @@ import {
 } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { BgShadesComponent } from "../../../bg-shades/bg-shades.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-house',
   standalone: true,
-  imports: [BgShadesComponent],
+  imports: [BgShadesComponent, TranslateModule],
   templateUrl: './about-house.component.html',
   styleUrls: ['./about-house.component.scss'],
   animations: [

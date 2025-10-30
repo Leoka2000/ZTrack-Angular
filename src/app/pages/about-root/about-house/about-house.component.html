@@ -32,27 +32,12 @@
 
   <!-- Text Section -->
   <div [@fadeInUp]="sectionStates[0]" class="flex-1 mb-8 md:mb-0">
-    <h2 class="text-4xl font-bold mb-6 text-neutral-300">About us</h2>
-    <p class="font-semibold mb-2 text-neutral-400">
-      <span class="font-bold">ZANE systems Limited Liability</span> Company was
-      founded in <span class="font-bold">2012</span> by electrical engineer
-      <span class="font-bold">Zoltán Erdei</span>.
-    </p>
-    <p class="mb-4 text-neutral-400">
-      The company was established to meet the needs of foreign and domestic
-      circuit design. Accordingly, the main activity of the company from the
-      very beginning is the production of electronic circuit boards and
-      electronic design.
-    </p>
-    <p class="mb-4 text-neutral-400">
-      Creating a design office capable of designing world-class electronic
-      products played a very important role in founding the company.
-    </p>
-    <p class="text-neutral-400">
-      Our mission is to show that Hungarian electronics professionals can stand
-      their ground not only in electronics contract manufacturing, but also in
-      design.
-    </p>
+     <h2 class="text-4xl font-bold mb-6 text-neutral-300" [innerHTML]="'aboutHouse.TITLE' | translate"></h2>
+
+    <p class="font-semibold mb-2 text-neutral-400" [innerHTML]="'aboutHouse.PARA1' | translate"></p>
+    <p class="mb-4 text-neutral-400" [innerHTML]="'aboutHouse.PARA2' | translate"></p>
+    <p class="mb-4 text-neutral-400" [innerHTML]="'aboutHouse.PARA3' | translate"></p>
+    <p class="text-neutral-400" [innerHTML]="'aboutHouse.PARA4' | translate"></p>
   </div>
 
   <!-- Image Section -->

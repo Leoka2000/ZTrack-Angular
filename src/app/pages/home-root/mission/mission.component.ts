@@ -13,6 +13,7 @@ import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 
 import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bottom.component";
 import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mission',
@@ -23,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
   MatButtonModule,
     BgShadesComponent,
     BgShadesBottomComponent,
+    TranslateModule
   ],
   templateUrl: './mission.component.html',
   styleUrls: ['./mission.component.scss'],

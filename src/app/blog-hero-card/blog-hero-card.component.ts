@@ -4,11 +4,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { BgShadesComponent } from "../bg-shades/bg-shades.component";
+import { BgShadesBottomComponent } from "../bg-shades-bottom/bg-shades-bottom.component";
 
 @Component({
   selector: 'app-blog-hero-card',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule, BgShadesComponent],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, BgShadesComponent, BgShadesBottomComponent],
   templateUrl: './blog-hero-card.component.html',
 })
 export class BlogHeroCardComponent implements AfterViewInit {

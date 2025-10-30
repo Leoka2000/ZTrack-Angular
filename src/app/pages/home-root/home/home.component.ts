@@ -9,13 +9,15 @@ import { ContactCtaComponent } from '../contact-cta/contact-cta.component';
 import { FarmImageAboutUsComponent } from '../farm-image-about-us/farm-image-about-us.component';
 import { BgShadesComponent } from "../../../bg-shades/bg-shades.component";
 import { BlogHeroCardComponent } from '../../../blog-hero-card/blog-hero-card.component';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-imports: [ HeroComponent, MissionComponent, ContactCtaComponent,  ProductsComponent, FarmImageAboutUsComponent, BgShadesComponent, BlogHeroCardComponent],
+imports: [HeroComponent, MissionComponent, ContactCtaComponent, ProductsComponent, FarmImageAboutUsComponent, BgShadesComponent, BlogHeroCardComponent,TranslateModule],
   templateUrl: './home.component.html',
  
 })

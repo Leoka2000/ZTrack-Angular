@@ -1,63 +1,42 @@
-<div class="w-full relative isolate overflow-clip py-16">
+<div class="w-full relative isolate overflow-clip py-44">
   <app-bg-shades></app-bg-shades>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
 
     <!-- Left Content -->
     <div class="space-y-6 left-content">
-
       <div class="space-y-2 animate-delay-2">
-        <p class="text-sm font-medium tracking-wide uppercase" 
-           style="color: oklch(70.8% 0 0); opacity: 0; transform: translateY(50px);">
-          Introducing zTag smart grazing
+        <p class="text-sm font-medium tracking-wide uppercase"
+           style="color: oklch(70.8% 0 0); opacity: 0; transform: translateY(50px)">
+          {{ 'farmAbout.INTRO' | translate }}
         </p>
-        <h1 class="text-5xl md:text-6xl font-bold" 
-            style="color: oklch(97% 0 0); opacity: 0; transform: translateY(50px);">
-          Our mission
+        <h1 class="text-5xl md:text-6xl font-bold"
+            style="color: oklch(97% 0 0); opacity: 0; transform: translateY(50px)">
+          {{ 'farmAbout.TITLE' | translate }}
         </h1>
       </div>
 
       <div class="space-y-4 text-base md:text-lg" style="color: oklch(87.1% 0.006 286.286)">
-        <p style="opacity: 0; transform: translateY(50px);">
-          The <strong>grazed animals</strong> feel much
-          <strong>better outdoors</strong>, develop more beautifully, and are
-          healthier. It is in everyone's interest to
-          <strong>sustain grazing</strong> as much as possible worldwide.
-        </p>
-
-        <p style="opacity: 0; transform: translateY(50px);">
-          This is significant not only from the perspective of animal health but
-          also in terms of landscape maintenance and preserving biodiversity.
-        </p>
-
-        <p style="opacity: 0; transform: translateY(50px);">
-          Modern technologies should be utilized in grazing as well. Using
-          <strong>GPS satellites</strong>, we can track the movement of animals,
-          and from sensor data, we can check their activity,
-          <strong>health</strong> status, nutrition, or even their reproductive
-          period. We are developing sophisticated sensors that animals can
-          comfortably wear in their ears, allowing us to continuously monitor
-          and ensure the safety of our livestock.
-        </p>
+        <p style="opacity: 0; transform: translateY(50px)" [innerHTML]="'farmAbout.PARAGRAPH1' | translate"></p>
+        <p style="opacity: 0; transform: translateY(50px)" [innerHTML]="'farmAbout.PARAGRAPH2' | translate"></p>
+        <p style="opacity: 0; transform: translateY(50px)" [innerHTML]="'farmAbout.PARAGRAPH3' | translate"></p>
       </div>
 
       <div class="pt-4">
-        <a mat-raised-button color="primary" 
-           style="border-radius: 55px; font-size: 1.25rem; padding: 30px 0; width: 100%; opacity: 0; transform: translateY(50px);"
+        <a mat-raised-button color="primary"
+           style="border-radius: 55px; font-size: 1.25rem; padding: 30px 0; width: 100%; opacity: 0; transform: translateY(50px)"
            [routerLink]="['/about']">
           <mat-icon>info</mat-icon>
-          About us
+          {{ 'farmAbout.BUTTON' | translate }}
         </a>
       </div>
-
     </div>
 
     <!-- Right Image -->
-    <div class="order-first lg:order-last right-image" 
-         style="opacity: 0; transform: translateY(50px);">
-      <div class="rounded-3xl border-2 border-cyan-900 shadow-lg overflow-hidden" 
+    <div class="order-first lg:order-last right-image" style="opacity: 0; transform: translateY(50px)">
+      <div class="rounded-3xl border-2 border-cyan-900 shadow-lg overflow-hidden"
            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
-        <img src="/images/mission-cows.jpg" alt="Cows grazing on hillside" class="w-full h-auto object-cover"/>
+        <img src="/images/mission-cows.jpg" alt="Cows grazing on hillside" class="w-full h-auto object-cover" />
       </div>
     </div>
 

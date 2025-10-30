@@ -1,28 +1,22 @@
 <nav
   class="fixed top-0 left-0 w-full z-50 h-20 flex justify-between items-center px-4 md:px-8 custom-nunito"
-  style="
-    backdrop-filter: blur(5px);
-    transition: background 0.3s, backdrop-filter 0.3s;
-  "
   [ngStyle]="{
     'background-color': 'rgba(255, 255, 255, 0.1)',
     'backdrop-filter': 'blur(25px)'
   }"
 >
-
-  <div
-    *ngIf="!showMobileToggle()"
-    class="flex justify-center items-center py-4"
-  >
+  <!-- Logo -->
+  <div *ngIf="!showMobileToggle()" class="flex justify-center items-center py-4">
     <a class="cursor-pointer" [routerLink]="['/']">
       <img
         src="images/zanelogo.png"
         alt="Logo"
-        style="height: 3rem; object-fit: contain; filter: brightness(2) contrast(0);"
+        style="height: 3rem; object-fit: contain; filter: brightness(0) invert(1);"
       />
     </a>
   </div>
 
+  <!-- Mobile menu toggle -->
   <div class="flex items-center">
     <button
       *ngIf="showMobileToggle()"
@@ -35,29 +29,31 @@
     </button>
   </div>
 
- 
+  <!-- Desktop menu items -->
   <div *ngIf="!showMobileToggle()" class="flex gap-4 items-center mr-28">
-    <a     [routerLink]="[item.route]" *ngFor="let item of menuItems"> 
+    <a [routerLink]="[item.route]" *ngFor="let item of menuItems">
       <button mat-button>
         <mat-icon>{{ item.icon }}</mat-icon>
-        {{ item.label }}
+        {{ item.key | translate }}
       </button>
     </a>
   </div>
 
+  <!-- Language dropdown + auth buttons -->
   <div class="flex gap-2 items-center">
+    <app-demo></app-demo>
     <button mat-button color="accent">
       <mat-icon>login</mat-icon>
-      Login
+      {{ 'navbar.LOGIN' | translate }}
     </button>
     <button mat-flat-button color="accent">
       <mat-icon>account_circle</mat-icon>
-      Register
+      {{ 'navbar.REGISTER' | translate }}
     </button>
   </div>
 </nav>
 
-
+<!-- Mobile menu items -->
 <div
   *ngIf="isMenuOpen() && showMobileToggle()"
   class="fixed left-0 right-0 z-40 flex flex-col border-t border-black/10 transition-all duration-300"
@@ -67,9 +63,8 @@
     backdrop-filter: blur(10px);
   "
 >
-
   <button mat-button *ngFor="let item of menuItems" (click)="toggleMenu()">
     <mat-icon>{{ item.icon }}</mat-icon>
-    {{ item.label }}
+    {{ item.key | translate }}
   </button>
 </div>

@@ -3,11 +3,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-farm-image-about-us',
   standalone: true,
-  imports: [MatIconModule, BgShadesComponent, RouterLink, MatButtonModule],
+  imports: [MatIconModule, BgShadesComponent, RouterLink, MatButtonModule, TranslateModule],
   templateUrl: './farm-image-about-us.component.html',
   styleUrls: ['./farm-image-about-us.component.scss']
 })

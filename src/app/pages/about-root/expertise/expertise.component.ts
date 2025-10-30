@@ -8,11 +8,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { MatIconModule } from '@angular/material/icon';
 import { BgShadesComponent } from "../../../bg-shades/bg-shades.component";
 import { MatButtonModule } from "@angular/material/button";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-expertise',
   standalone: true,
-  imports: [MatIconModule, BgShadesComponent, MatButtonModule],
+  imports: [MatIconModule, BgShadesComponent, MatButtonModule, TranslateModule],
   templateUrl: './expertise.component.html',
   styleUrls: ['./expertise.component.scss'],
   animations: [

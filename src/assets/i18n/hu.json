@@ -1,0 +1,72 @@
+{
+  "HELLO": "Helló világ!",
+  "CHANGE_LANG": "Váltás nyelvre",
+  "navbar": {
+    "HOME": "Főoldal",
+    "SHOP": "Bolt",
+    "ABOUT": "Rólunk",
+    "CONTACT": "Kapcsolat",
+    "BLOG": "Blog",
+    "LOGIN": "Bejelentkezés",
+    "REGISTER": "Regisztráció"
+  },
+  "hero": {
+    "EXPLORE_BUTTON": "Fedezze fel termékeinket",
+    "TITLE": "Okos nyomkövetők tehenek és szarvasmarhák számára",
+    "SUBTITLE": "24/7 gondoskodunk a jószágairól, és élőben követheted a helyzetüket a dashboardon",
+    "TRACKER_MAP": "Nyomkövető térkép",
+    "GET_STARTED": "Kezdés"
+  },
+  "mission": {
+    "REALTIME_TITLE": "Valós idejű",
+    "REALTIME_DESC": "Az állatok helyzete és mozgása valós időben követhető a legújabb GPS technológiának köszönhetően.",
+    "WATERPROOF_TITLE": "Vízálló",
+    "WATERPROOF_DESC": "A fülcímke teljesen vízálló, így minden időjárási körülménynek ellenáll.",
+    "ACTIVITY_TITLE": "Tevékenységkövetés",
+    "ACTIVITY_DESC": "Állata folyamatos nyomon követésével tájékoztatást kap az állapotáról."
+  },
+  "farmAbout": {
+    "INTRO": "Bemutatjuk a zTag okos legeltetést",
+    "TITLE": "Küldetésünk",
+    "PARAGRAPH1": "A <strong>legeltetett állatok</strong> sokkal <strong>jobban érzik magukat a szabadban</strong>, szebben fejlődnek és egészségesebbek. Mindenki érdeke, hogy a <strong>legeltetést fenntartható módon</strong> folytassuk világszerte.",
+    "PARAGRAPH2": "Ez nemcsak az állatok egészsége szempontjából jelentős, hanem a tájfenntartás és a biodiverzitás megőrzése szempontjából is.",
+    "PARAGRAPH3": "A modern technológiákat a legeltetésben is alkalmazni kell. A <strong>GPS műholdak</strong> segítségével nyomon követhetjük az állatok mozgását, és az érzékelők adataiból ellenőrizhetjük az aktivitásukat, az <strong>egészségi</strong> állapotukat, a táplálkozásukat vagy akár a szaporodási időszakukat. Olyan fejlett érzékelőket fejlesztünk, amelyeket az állatok kényelmesen viselhetnek a fülükben, lehetővé téve az állatok folyamatos monitorozását és biztonságuk biztosítását.",
+    "BUTTON": "Rólunk"
+  },
+  "products": {
+    "INTRO": "Bemutatjuk termékeinket",
+    "TITLE": "Termékeink",
+    "PARAGRAPH1": "Vége a <strong>fáradságos manuális nyomon követésnek</strong> és a jószágok ellenőrzésének. GPS <strong>fülcímkéink</strong> lehetővé teszik, hogy könnyedén és pontosan nyomon követhesse az állatok helyzetét és aktivitását, értékes információkat nyújtva a <strong>gazdaság hatékonyságának</strong> és jövedelmezőségének javításához.",
+    "PARAGRAPH2": "Ez a csúcstechnológiás fülcímke <strong>legmodernebb GPS technológiát</strong> alkalmaz, hogy valós idejű helyzet- és mozgásadatokat juttasson az eszközére. Az állatok tartózkodási helyének nyomon követésével biztosíthatja azok <strong>biztonságát</strong> és megelőzheti az esetleges <strong>lopást vagy elvesztést</strong>.",
+    "PARAGRAPH3": "GPS fülcímkéink <strong>tartósak és hosszú élettartamúak</strong>, így még a legkeményebb körülményeket is kibírják. Emellett <strong>kényelmesek az állatok számára</strong>, így humánus és praktikus megoldást nyújtanak az állattenyésztéshez.",
+    "PARAGRAPH4": "A GPS fülcímke nemcsak a felügyeletet és a biztonságot segíti, hanem az <strong>állategészségügyi menedzsmentet</strong> is. A valós idejű adatokhoz való hozzáféréssel gyorsan felismerheti az <strong>abnormális viselkedést</strong> vagy <strong>egészségügyi problémákat</strong>, és megfelelő intézkedéseket tehet.",
+    "PARAGRAPH5": "GPS fülcímkéinkbe való befektetés <strong>időt, pénzt és aggodalmat</strong> takarít meg. Tapasztalja meg a modern állattartás előnyeit még ma – rendeljen GPS fülcímkéket, és emelje a gazdaságát a következő szintre!",
+    "PARAGRAPH6": "A készülék <strong>erős zöld villogó LED-je</strong> segíti a gazdát, hogy az állatot még gyenge fényviszonyok között is megtalálja.",
+    "BUTTON": "Termékeink"
+  },
+  "contactCta": {
+    "TITLE": "Felkeltettük érdeklődését?",
+    "DESCRIPTION": "Forduljon hozzánk bizalommal, ha kérdése van, vagy egyedi ajánlatot szeretne kérni.",
+    "BUTTON": "Kapcsolat"
+  },
+  "aboutHouse": {
+    "TITLE": "Rólunk",
+    "PARA1": "<strong>A ZANE Systems Kft.</strong> 2012-ben alakult, alapítója elektromérnök <strong>Zoltán Erdei</strong>.",
+    "PARA2": "A céget a hazai és külföldi áramköri tervezés igényeinek kielégítésére hozták létre. Ennek megfelelően a cég fő tevékenysége a kezdetektől elektronikai áramkörök gyártása és elektronikai tervezés.",
+    "PARA3": "Világszínvonalú elektronikai termékeket tervezni képes tervezőiroda létrehozása fontos szerepet játszott a cégalapításban.",
+    "PARA4": "Küldetésünk bemutatni, hogy a magyar elektronikai szakemberek nemcsak az elektronikai szerződéses gyártásban, hanem a tervezésben is megállják a helyüket."
+  },
+  "expertise": {
+    "TITLE": "Szakértelmünk területei <span class='text-cyan-300'>expertise</span>",
+    "CARD1_TITLE": "PLC vezérlés",
+    "CARD1_DESC": "Speciális PLC megoldásokat kínálunk, amelyek a testreszabott gépszakmák egyedi igényeihez igazodnak.",
+    "CARD2_TITLE": "Áramköri rajz",
+    "CARD2_DESC": "Több mint tíz éves tapasztalattal rendelkezünk nagysebességű, RF és analóg áramkörök, tápegységek és összetett, magas integrációjú elektronika tervezésében.",
+    "CARD3_TITLE": "Nyomtatott áramkör tervezés",
+    "CARD3_DESC": "Az áramköri rajz megtervezése a munkánk egyik legfontosabb része — a nyomtatott áramkörök tervezése.",
+    "CARD4_TITLE": "Lézeres vágás és gravírozás",
+    "CARD4_DESC": "120W-os CO₂ lézervágónkkal és 30W-os fiber lézer gravírozónkkal széles körű szolgáltatásokat kínálunk, hogy kielégítsük testreszabási és gyártási igényeit.",
+    "CARD5_TITLE": "Beágyazott szoftverfejlesztés",
+    "CARD5_DESC": "Beágyazott fejlesztés során áramköreinket intelligens algoritmusokkal látjuk el, biztosítva, hogy eszközeink sok területen segítsenek."
+  }
+}
