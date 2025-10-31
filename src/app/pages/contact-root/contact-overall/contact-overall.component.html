@@ -1,48 +1,59 @@
-<section class="w-full flex flex-col items-center isolate relative  overflow-x-clip overflow-y-visible">
- <app-bg-shades></app-bg-shades>
- <app-bg-shades-bottom></app-bg-shades-bottom>
+<section
+  class="w-full flex flex-col items-center isolate relative overflow-x-clip bg-black overflow-y-visible px-4 sm:px-6 lg:px-0 py-12"
+>
+  <app-bg-shades></app-bg-shades>
+  <app-bg-shades-bottom></app-bg-shades-bottom>
 
-  <div
-    class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
-  >
-    <div class="flex flex-col gap-10">
-      <div *ngFor="let item of contactItems">
+  <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    
+    <!-- LEFT SIDE: Contact + Social -->
+    <div class="flex flex-col gap-10 fade-section w-full">
+      
+      <div *ngFor="let item of contactItems" class="fade-section w-full">
         <h3 class="text-2xl font-semibold mb-3 text-white">{{ item.title }}</h3>
-        <div class="flex items-center gap-4">
-               <a [href]="item.link" target="_blank" class="text-gray-300 hover:underline">
-          <button mat-mini-fab color="primary" aria-label="Contact icon">
-            <mat-icon>{{ item.icon }}</mat-icon>
-          </button>
-</a>
-          <a [href]="item.link" class="text-gray-300 hover:underline">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a
+            [href]="item.link"
+            target="_blank"
+            class="text-gray-300 hover:underline flex-shrink-0"
+          >
+            <button mat-mini-fab color="primary" aria-label="Contact icon">
+              <mat-icon>{{ item.icon }}</mat-icon>
+            </button>
+          </a>
+          <a [href]="item.link" class="text-gray-300 hover:underline break-all">
             {{ item.text }}
           </a>
         </div>
       </div>
 
-      <div>
+      <div class="fade-section w-full">
         <h3 class="text-2xl font-semibold mb-3 text-white">Follow Us</h3>
         <div class="flex flex-col gap-4">
-          <div
-            *ngFor="let social of socialLinks"
-            class="flex items-center gap-4"
-          >
-                 <a [href]="social.link" target="_blank" class="text-gray-300 hover:underline">
-            <button mat-mini-fab color="primary" aria-label="Social icon">
-              <mat-icon>{{ social.icon }}</mat-icon>
-            </button>
-                    </a>
-
-     <a [href]="social.link" target="_blank" class="text-gray-300 hover:underline">
+          <div *ngFor="let social of socialLinks" class="flex flex-col sm:flex-row items-start sm:items-center gap-4 fade-section w-full">
+            <a
+              [href]="social.link"
+              target="_blank"
+              class="text-gray-300 hover:underline flex-shrink-0"
+            >
+              <button mat-mini-fab color="primary" aria-label="Social icon">
+                <mat-icon>{{ social.icon }}</mat-icon>
+              </button>
+            </a>
+            <a
+              [href]="social.link"
+              target="_blank"
+              class="text-gray-300 hover:underline break-all"
+            >
               {{ social.text }}
-     </a>
-    
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div>
+    <!-- RIGHT SIDE: Contact Form -->
+    <div class="fade-section w-full">
       <app-contact-form></app-contact-form>
     </div>
   </div>

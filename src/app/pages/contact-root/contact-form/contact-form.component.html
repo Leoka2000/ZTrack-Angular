@@ -1,99 +1,92 @@
 <form
-  class="max-w-2xl mx-auto p-8 rounded-2xl  shadow-lg flex flex-col gap-6 isolate relative overflow-hidden bg-neutral-900 text-neutral-200 border border-neutral-800"
+  class="max-w-2xl mx-auto sm:p-8 p-2 rounded-2xl shadow-lg flex flex-col gap-6 isolate relative overflow-hidden bg-neutral-900 text-neutral-200 border border-neutral-600"
   [formGroup]="contactForm"
   (ngSubmit)="onSubmit()"
-
   novalidate
 >
   <app-bg-shades></app-bg-shades>
   <app-bg-shades-bottom></app-bg-shades-bottom>
 
-  
   <mat-form-field class="w-full">
-    <mat-label>Full Name</mat-label>
-    <input matInput formControlName="fullName" placeholder="Enter your full name" />
+    <mat-label>{{ 'contactForm.FULL_NAME_LABEL' | translate }}</mat-label>
+    <input matInput formControlName="fullName" placeholder="{{ 'contactForm.FULL_NAME_PLACEHOLDER' | translate }}" />
     <mat-icon matSuffix>person</mat-icon>
     <mat-error *ngIf="f.fullName.touched && f.fullName.hasError('required')">
-      Full name is required
+      {{ 'contactForm.FULL_NAME_REQUIRED' | translate }}
     </mat-error>
     <mat-error *ngIf="f.fullName.hasError('minlength')">
-      Name must be at least 3 characters long
+      {{ 'contactForm.FULL_NAME_MINLENGTH' | translate }}
     </mat-error>
   </mat-form-field>
 
-
   <mat-form-field class="w-full">
-    <mat-label>Email Address</mat-label>
-    <input matInput formControlName="email" placeholder="Enter your email" />
+    <mat-label>{{ 'contactForm.EMAIL_LABEL' | translate }}</mat-label>
+    <input matInput formControlName="email" placeholder="{{ 'contactForm.EMAIL_PLACEHOLDER' | translate }}" />
     <mat-icon matSuffix>email</mat-icon>
     <mat-error *ngIf="f.email.touched && f.email.hasError('required')">
-      Email is required
+      {{ 'contactForm.EMAIL_REQUIRED' | translate }}
     </mat-error>
     <mat-error *ngIf="f.email.hasError('email')">
-      Please enter a valid email address
+      {{ 'contactForm.EMAIL_INVALID' | translate }}
     </mat-error>
   </mat-form-field>
 
   <mat-form-field class="w-full">
-    <mat-label>Phone Number</mat-label>
-    <input matInput formControlName="phone" placeholder="Enter your phone number" />
+    <mat-label>{{ 'contactForm.PHONE_LABEL' | translate }}</mat-label>
+    <input matInput formControlName="phone" placeholder="{{ 'contactForm.PHONE_PLACEHOLDER' | translate }}" />
     <mat-icon matSuffix>phone</mat-icon>
     <mat-error *ngIf="f.phone.touched && f.phone.hasError('required')">
-      Phone number is required
+      {{ 'contactForm.PHONE_REQUIRED' | translate }}
     </mat-error>
     <mat-error *ngIf="f.phone.hasError('pattern')">
-      Please enter a valid phone number
+      {{ 'contactForm.PHONE_INVALID' | translate }}
     </mat-error>
   </mat-form-field>
 
-
   <mat-form-field class="w-full">
-    <mat-label>Subject</mat-label>
-    <input matInput formControlName="subject" placeholder="Enter a subject" />
+    <mat-label>{{ 'contactForm.SUBJECT_LABEL' | translate }}</mat-label>
+    <input matInput formControlName="subject" placeholder="{{ 'contactForm.SUBJECT_PLACEHOLDER' | translate }}" />
     <mat-icon matSuffix>subject</mat-icon>
     <mat-error *ngIf="f.subject.touched && f.subject.hasError('required')">
-      Subject is required
+      {{ 'contactForm.SUBJECT_REQUIRED' | translate }}
     </mat-error>
   </mat-form-field>
 
-
   <mat-form-field class="w-full">
-    <mat-label>Message</mat-label>
+    <mat-label>{{ 'contactForm.MESSAGE_LABEL' | translate }}</mat-label>
     <textarea
       matInput
       rows="5"
       formControlName="message"
-      placeholder="Type your message here..."
+      placeholder="{{ 'contactForm.MESSAGE_PLACEHOLDER' | translate }}"
     ></textarea>
     <mat-icon matSuffix>chat</mat-icon>
     <mat-error *ngIf="f.message.touched && f.message.hasError('required')">
-      Message is required
+      {{ 'contactForm.MESSAGE_REQUIRED' | translate }}
     </mat-error>
     <mat-error *ngIf="f.message.hasError('minlength')">
-      Message must be at least 10 characters long
+      {{ 'contactForm.MESSAGE_MINLENGTH' | translate }}
     </mat-error>
   </mat-form-field>
 
-
   <mat-checkbox color="primary" formControlName="consent">
-    I agree to the
+    {{ 'contactForm.CONSENT_TEXT' | translate }}
     <a href="/privacy-policy" class="text-cyan-400 underline hover:text-cyan-300">
-      privacy policy
+      {{ 'contactForm.PRIVACY_POLICY' | translate }}
     </a>
   </mat-checkbox>
   <mat-error *ngIf="f.consent.touched && f.consent.hasError('required')">
-    You must agree before submitting
+    {{ 'contactForm.CONSENT_REQUIRED' | translate }}
   </mat-error>
 
   <button
     mat-flat-button
-
     color="primary"
     class="w-full py-3 mt-4 text-lg font-semibold rounded-xl"
     [disabled]="contactForm.invalid"
   >
     <mat-icon>send</mat-icon>
-    Send Message
+    {{ 'contactForm.SEND_BUTTON' | translate }}
   </button>
 
   <div class="relative isolate overflow-hidden"></div>

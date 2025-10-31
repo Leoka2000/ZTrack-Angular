@@ -3,11 +3,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bottom.component";
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [BgShadesComponent, MatButtonModule, MatIconModule, TranslateModule],
+  imports: [BgShadesComponent, MatButtonModule, MatIconModule, TranslateModule, BgShadesBottomComponent],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
@@ -41,7 +42,7 @@ export class ProductsComponent implements AfterViewInit {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.8 });
+    }, { threshold: 0.4 });
 
     observer.observe(this.el.nativeElement);
   }

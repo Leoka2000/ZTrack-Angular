@@ -3,7 +3,7 @@ import { Component, signal, computed } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { DemoComponent } from "../demo/demo.component";
+import { DemoComponent } from '../demo/demo.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -18,18 +18,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     NgStyle,
     RouterLink,
     DemoComponent,
-    TranslateModule
+    TranslateModule,
   ],
 })
 export class NavbarComponent {
-
-  isMenuOpen = signal(false);       
-  showMobileToggle = signal(false);  
+  isMenuOpen = signal(false);
+  showMobileToggle = signal(false);
 
   // Menu items with translation keys
   menuItems = [
     { key: 'navbar.HOME', icon: 'home', route: '/' },
-    { key: 'navbar.SHOP', icon: 'shopping_cart', route: '/shop' },
+   // { key: 'navbar.SHOP', icon: 'shopping_cart', route: '/shop' },
     { key: 'navbar.ABOUT', icon: 'info', route: '/about' },
     { key: 'navbar.CONTACT', icon: 'contact_mail', route: '/contact' },
     { key: 'navbar.BLOG', icon: 'article_person', route: '/blog' },

@@ -1,5 +1,33 @@
-<div class="w-full relative isolate overflow-clip py-44">
+<div class="w-full relative isolate bg-black overflow-clip py-44 px-4 sm:px-6 md:px-10">
   <app-bg-shades></app-bg-shades>
+    <app-bg-shades-bottom></app-bg-shades-bottom>
+ <span class="absolute -top-32 -right-44 opacity-30 md:block">
+    <svg
+      width="400"
+      height="400"
+      viewBox="0 0 590 590"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="294.897"
+        cy="294.897"
+        r="293.332"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+    </svg>
+  </span>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
 
@@ -24,7 +52,8 @@
 
       <div class="pt-4">
         <a mat-raised-button color="primary"
-           style="border-radius: 55px; font-size: 1.25rem; padding: 30px 0; width: 100%; opacity: 0; transform: translateY(50px)"
+           class="w-full sm:w-auto px-6 sm:px-10 py-6 sm:py-8"
+         style="border-radius: 55px; font-size: 1.25rem; padding: 30px 0; width: 100%; opacity:0; transform: translateY(50px);"
            [routerLink]="['/about']">
           <mat-icon>info</mat-icon>
           {{ 'farmAbout.BUTTON' | translate }}
@@ -33,7 +62,8 @@
     </div>
 
     <!-- Right Image -->
-    <div class="order-first lg:order-last right-image" style="opacity: 0; transform: translateY(50px)">
+    <div class="order-first lg:order-last right-image mt-10 lg:mt-0"
+         style="opacity: 0; transform: translateY(50px)">
       <div class="rounded-3xl border-2 border-cyan-900 shadow-lg overflow-hidden"
            style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
         <img src="/images/mission-cows.jpg" alt="Cows grazing on hillside" class="w-full h-auto object-cover" />
@@ -41,4 +71,34 @@
     </div>
 
   </div>
+
+
+
+   <span class="absolute -bottom-32 -left-44 -z-10 opacity-30 md:block">
+    <svg
+      width="400"
+      height="400"
+      viewBox="0 0 590 590"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="294.897"
+        cy="294.897"
+        r="293.332"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+    </svg>
+  </span>
 </div>

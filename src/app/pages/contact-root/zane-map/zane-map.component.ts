@@ -10,7 +10,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 })
 export class ZaneMapComponent {
   zoom = 15;
-  center: google.maps.LatLngLiteral = { lat: 47.6008601, lng: 21.7545374 }; // Hajdúsámson coordinates
+  center: google.maps.LatLngLiteral = { lat: 47.584317, lng: 21.726149 }; // Hajdúsámson coordinates
   markerOptions: google.maps.MarkerOptions = { draggable: false };
-  markerPosition: google.maps.LatLngLiteral = { lat: 47.6008601, lng: 21.7545374 };
+  markerPosition: google.maps.LatLngLiteral = { lat: 47.584317, lng: 21.726149 };
 }

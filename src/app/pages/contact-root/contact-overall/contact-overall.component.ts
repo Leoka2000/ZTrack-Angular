@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  AfterViewInit,
+  Renderer2,
+} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { NgFor } from '@angular/common';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
@@ -10,10 +15,20 @@ import { MatRipple } from "@angular/material/core";
 @Component({
   selector: 'app-contact-overall',
   standalone: true,
-  imports: [MatIconModule, NgFor, ContactFormComponent, MatIconModule, MatButtonModule, BgShadesComponent, BgShadesBottomComponent, MatRipple],
+  imports: [
+    MatIconModule,
+    NgFor,
+    ContactFormComponent,
+    MatButtonModule,
+    BgShadesComponent,
+    BgShadesBottomComponent,
+    MatRipple
+  ],
   templateUrl: './contact-overall.component.html',
+  styleUrls: ['./contact-overall.component.scss']
 })
-export class ContactOverallComponent {
+export class ContactOverallComponent implements AfterViewInit {
+
   contactItems = [
     {
       title: 'Phone',
@@ -46,4 +61,36 @@ export class ContactOverallComponent {
       link: 'https://www.linkedin.com/company/zanesystems',
     },
   ];
+
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  ngAfterViewInit(): void {
+  const elements = this.el.nativeElement.querySelectorAll('.fade-section');
+
+  elements.forEach((el: HTMLElement, index: number) => {
+    this.renderer.setStyle(el, 'opacity', '0');
+    this.renderer.setStyle(el, 'transform', 'translateY(50px)');
+    this.renderer.setStyle(
+      el,
+      'transition',
+      `opacity 0.8s ease-out ${index * 0.2}s, transform 0.8s ease-out ${index * 0.2}s`
+    );
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          this.renderer.setStyle(el, 'opacity', '1');
+          this.renderer.setStyle(el, 'transform', 'translateY(0)');
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  elements.forEach((el: any) => observer.observe(el));
+}
 }

@@ -1,90 +1,148 @@
-<section class="w-full py-20 px-6 isolate z-10 overflow-x-clip relative">
-  <span class="absolute -z-30 -bottom-0 -right-64 opacity-30">
-    <svg width="400" height="400" viewBox="0 0 590 590" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="294.897" cy="294.897" r="293.332" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
-      <path d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
-      <path d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+<div
+  class="relative overflow-hidden py-24 sm:py-32 lg:py-40 px-4 sm:px-6 md:px-10 bg-black isolate w-full"
+>
+  <!-- Decorative circle top-right -->
+  <span class="absolute -top-32 -right-44 opacity-30 md:block">
+    <svg
+      width="400"
+      height="400"
+      viewBox="0 0 590 590"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="294.897"
+        cy="294.897"
+        r="293.332"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
     </svg>
   </span>
 
   <app-bg-shades></app-bg-shades>
+  <app-bg-shades-bottom></app-bg-shades-bottom>
 
-  <div class="max-w-7xl mx-auto text-center mb-12">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-neutral-300" [innerHTML]="'expertise.TITLE' | translate"></h2>
-  </div>
+  <!-- Cards grid -->
+  <div
+    class="max-w-7xl mx-auto grid gap-6 sm:gap-8 md:gap-10 sm:grid-cols-2 lg:grid-cols-3 justify-items-center px-2"
+  >
+    <!-- Card 1 -->
+    <div
+      [@fadeInUp]="cardStates[0]"
+      class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 sm:p-8 shadow-xl hover:shadow-2xl relative w-full transition-transform hover:-translate-y-1"
+    >
+      <app-bg-shades></app-bg-shades>
 
-  <!-- Card 1 -->
-  <div [@fadeInUp]="cardStates[0]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
-    <app-bg-shades></app-bg-shades>
-    <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip"/>
-    <div class="mb-2">
-      <button mat-mini-fab color="primary" aria-label="PLC Icon">
-        <mat-icon>settings_input_component</mat-icon>
-      </button>
+      <img
+        src="/images/decoration.png"
+        alt="Decoration"
+        class="w-20 h-20 sm:w-24 sm:h-24 object-cover absolute -bottom-1 right-0"
+      />
+      <div class="mb-4">
+        <button mat-mini-fab color="primary">
+          <mat-icon>query_stats</mat-icon>
+        </button>
+      </div>
+      <h3
+        class="text-xl sm:text-2xl font-bold mb-2"
+        [innerHTML]="'mission.REALTIME_TITLE' | translate"
+      ></h3>
+      <p
+        class="text-sm sm:text-base leading-relaxed opacity-90 mb-10"
+        [innerHTML]="'mission.REALTIME_DESC' | translate"
+      ></p>
     </div>
-    <h3 class="text-2xl font-bold">{{ 'expertise.CARD1_TITLE' | translate }}</h3>
-    <p style="margin-block-end: 4rem;" class="text-sm leading-relaxed opacity-90">
-      {{ 'expertise.CARD1_DESC' | translate }}
-    </p>
+
+    <!-- Card 2 -->
+    <div
+      [@fadeInUp]="cardStates[1]"
+      class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 sm:p-8 shadow-xl hover:shadow-2xl relative w-full transition-transform hover:-translate-y-1"
+    >
+      <app-bg-shades></app-bg-shades>
+      <img
+        src="/images/decoration.png"
+        alt="Decoration"
+        class="w-20 h-20 sm:w-24 sm:h-24 object-cover absolute -bottom-1 right-0"
+      />
+      <div class="mb-4">
+        <button mat-mini-fab color="primary">
+          <mat-icon>shield</mat-icon>
+        </button>
+      </div>
+      <h3
+        class="text-xl sm:text-2xl font-bold mb-2"
+        [innerHTML]="'mission.WATERPROOF_TITLE' | translate"
+      ></h3>
+      <p
+        class="text-sm sm:text-base leading-relaxed opacity-90 mb-10"
+        [innerHTML]="'mission.WATERPROOF_DESC' | translate"
+      ></p>
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      [@fadeInUp]="cardStates[2]"
+      class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 sm:p-8 shadow-xl hover:shadow-2xl relative w-full transition-transform hover:-translate-y-1"
+    >
+      <app-bg-shades></app-bg-shades>
+      <img
+        src="/images/decoration.png"
+        alt="Decoration"
+        class="w-20 h-20 sm:w-24 sm:h-24 object-cover absolute -bottom-1 right-0"
+      />
+      <div class="mb-4">
+        <button mat-mini-fab color="primary">
+          <mat-icon>lightbulb</mat-icon>
+        </button>
+      </div>
+      <h3
+        class="text-xl sm:text-2xl font-bold mb-2"
+        [innerHTML]="'mission.ACTIVITY_TITLE' | translate"
+      ></h3>
+      <p
+        class="text-sm sm:text-base leading-relaxed opacity-90 mb-10"
+        [innerHTML]="'mission.ACTIVITY_DESC' | translate"
+      ></p>
+    </div>
   </div>
 
-  <!-- Card 2 -->
-  <div [@fadeInUp]="cardStates[1]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
-    <app-bg-shades></app-bg-shades>
-    <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip"/>
-    <div class="mb-2">
-      <button mat-mini-fab color="primary" aria-label="Circuit Icon">
-        <mat-icon>schema</mat-icon>
-      </button>
-    </div>
-    <h3 class="text-2xl font-bold">{{ 'expertise.CARD2_TITLE' | translate }}</h3>
-    <p style="margin-block-end: 4rem;" class="text-sm leading-relaxed opacity-90">
-      {{ 'expertise.CARD2_DESC' | translate }}
-    </p>
-  </div>
-
-  <!-- Card 3 -->
-  <div [@fadeInUp]="cardStates[2]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
-    <app-bg-shades></app-bg-shades>
-    <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip"/>
-    <div class="mb-2">
-      <button mat-mini-fab color="primary" aria-label="Board Icon">
-        <mat-icon>developer_board</mat-icon>
-      </button>
-    </div>
-    <h3 class="text-2xl font-bold">{{ 'expertise.CARD3_TITLE' | translate }}</h3>
-    <p style="margin-block-end: 4rem;" class="text-sm leading-relaxed opacity-90">
-      {{ 'expertise.CARD3_DESC' | translate }}
-    </p>
-  </div>
-
-  <!-- Card 4 -->
-  <div [@fadeInUp]="cardStates[3]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
-    <app-bg-shades></app-bg-shades>
-    <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip"/>
-    <div class="mb-2">
-      <button mat-mini-fab color="primary" aria-label="Laser Icon">
-        <mat-icon>precision_manufacturing</mat-icon>
-      </button>
-    </div>
-    <h3 class="text-2xl font-bold">{{ 'expertise.CARD4_TITLE' | translate }}</h3>
-    <p style="margin-block-end: 4rem;" class="text-sm leading-relaxed opacity-90">
-      {{ 'expertise.CARD4_DESC' | translate }}
-    </p>
-  </div>
-
-  <!-- Card 5 -->
-  <div [@fadeInUp]="cardStates[4]" class="bg-neutral-900 text-white rounded-2xl isolate overflow-clip p-6 shadow-xl hover:shadow-2xl relative max-w-lg w-full">
-    <app-bg-shades></app-bg-shades>
-    <img src="/images/decoration.png" alt="Decoration" class="w-24 h-24 object-cover absolute -bottom-1 right-0 overflow-clip"/>
-    <div class="mb-2">
-      <button mat-mini-fab color="primary" aria-label="Software Icon">
-        <mat-icon>developer_mode_tv</mat-icon>
-      </button>
-    </div>
-    <h3 class="text-2xl font-bold">{{ 'expertise.CARD5_TITLE' | translate }}</h3>
-    <p style="margin-block-end: 4rem;" class="text-sm leading-relaxed opacity-90">
-      {{ 'expertise.CARD5_DESC' | translate }}
-    </p>
-  </div>
-</section>
+  <!-- Decorative circle bottom-left -->
+  <span class="absolute -z-10 -bottom-32 -left-44 opacity-30 md:block">
+    <svg
+      width="400"
+      height="400"
+      viewBox="0 0 590 590"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="294.897"
+        cy="294.897"
+        r="293.332"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+      <path
+        d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z"
+        stroke="oklch(86.5% 0.127 207.078)"
+        stroke-width="3.12971"
+      />
+    </svg>
+  </span>
+</div>

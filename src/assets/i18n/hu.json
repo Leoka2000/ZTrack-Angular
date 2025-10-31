@@ -57,7 +57,7 @@
     "PARA4": "Küldetésünk bemutatni, hogy a magyar elektronikai szakemberek nemcsak az elektronikai szerződéses gyártásban, hanem a tervezésben is megállják a helyüket."
   },
   "expertise": {
-    "TITLE": "Szakértelmünk területei <span class='text-cyan-300'>expertise</span>",
+    "TITLE": "Szakértelmi <span class='text-cyan-300'>területeink</span>",
     "CARD1_TITLE": "PLC vezérlés",
     "CARD1_DESC": "Speciális PLC megoldásokat kínálunk, amelyek a testreszabott gépszakmák egyedi igényeihez igazodnak.",
     "CARD2_TITLE": "Áramköri rajz",
@@ -97,5 +97,36 @@
     },
     "COPYRIGHT": "Copyright © 2012 - {{currentYear}} ZANE systems Kft.",
     "DEVELOPER": "Fejlesztette: Leo Reus Oliveira"
-  }
+  },
+  "contactForm": {
+  "FULL_NAME_LABEL": "Teljes név",
+  "FULL_NAME_PLACEHOLDER": "Írd be a teljes neved",
+  "FULL_NAME_REQUIRED": "A teljes név megadása kötelező",
+  "FULL_NAME_MINLENGTH": "A névnek legalább 3 karakter hosszúnak kell lennie",
+
+  "EMAIL_LABEL": "Email cím",
+  "EMAIL_PLACEHOLDER": "Írd be az email címed",
+  "EMAIL_REQUIRED": "Az email megadása kötelező",
+  "EMAIL_INVALID": "Kérjük, érvényes email címet adj meg",
+
+  "PHONE_LABEL": "Telefonszám",
+  "PHONE_PLACEHOLDER": "Írd be a telefonszámod",
+  "PHONE_REQUIRED": "A telefonszám megadása kötelező",
+  "PHONE_INVALID": "Kérjük, érvényes telefonszámot adj meg",
+
+  "SUBJECT_LABEL": "Tárgy",
+  "SUBJECT_PLACEHOLDER": "Írd be a tárgyat",
+  "SUBJECT_REQUIRED": "A tárgy megadása kötelező",
+
+  "MESSAGE_LABEL": "Üzenet",
+  "MESSAGE_PLACEHOLDER": "Írd ide az üzeneted...",
+  "MESSAGE_REQUIRED": "Az üzenet megadása kötelező",
+  "MESSAGE_MINLENGTH": "Az üzenetnek legalább 10 karakter hosszúnak kell lennie",
+
+  "CONSENT_TEXT": "Elfogadom a",
+  "PRIVACY_POLICY": "adatvédelmi irányelveket",
+  "CONSENT_REQUIRED": "El kell fogadnod a beküldés előtt",
+
+  "SEND_BUTTON": "Üzenet küldése"
+}
 }

@@ -13,7 +13,7 @@
   "hero": {
     "EXPLORE_BUTTON": "Explore our Products",
     "TITLE": "Smart Trackers for Cows and Cattles",
-    "SUBTITLE": "We take care of your cattles 24/7 and see their location live in a dashboard",
+    "SUBTITLE": "GPS Trackers customly tailored for your herd. We take care of your cattles 24/7.",
     "TRACKER_MAP": "Tracker Map",
     "GET_STARTED": "Get Started"
   },
@@ -97,6 +97,38 @@
     },
     "COPYRIGHT": "Copyright © 2012 - {{currentYear}} ZANE systems Kft.",
     "DEVELOPER": "Developed by: Leo Reus Oliveira"
-  }
+  },
+
+  "contactForm": {
+  "FULL_NAME_LABEL": "Full Name",
+  "FULL_NAME_PLACEHOLDER": "Enter your full name",
+  "FULL_NAME_REQUIRED": "Full name is required",
+  "FULL_NAME_MINLENGTH": "Name must be at least 3 characters long",
+
+  "EMAIL_LABEL": "Email Address",
+  "EMAIL_PLACEHOLDER": "Enter your email",
+  "EMAIL_REQUIRED": "Email is required",
+  "EMAIL_INVALID": "Please enter a valid email address",
+
+  "PHONE_LABEL": "Phone Number",
+  "PHONE_PLACEHOLDER": "Enter your phone number",
+  "PHONE_REQUIRED": "Phone number is required",
+  "PHONE_INVALID": "Please enter a valid phone number",
+
+  "SUBJECT_LABEL": "Subject",
+  "SUBJECT_PLACEHOLDER": "Enter a subject",
+  "SUBJECT_REQUIRED": "Subject is required",
+
+  "MESSAGE_LABEL": "Message",
+  "MESSAGE_PLACEHOLDER": "Type your message here...",
+  "MESSAGE_REQUIRED": "Message is required",
+  "MESSAGE_MINLENGTH": "Message must be at least 10 characters long",
+
+  "CONSENT_TEXT": "I agree to the",
+  "PRIVACY_POLICY": "privacy policy",
+  "CONSENT_REQUIRED": "You must agree before submitting",
+
+  "SEND_BUTTON": "Send Message"
+}
 
 }

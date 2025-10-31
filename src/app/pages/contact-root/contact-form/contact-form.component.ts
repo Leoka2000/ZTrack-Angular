@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 import { BgShadesBottomComponent } from '../../../bg-shades-bottom/bg-shades-bottom.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -21,7 +22,8 @@ import { BgShadesBottomComponent } from '../../../bg-shades-bottom/bg-shades-bot
     MatButtonModule,
     MatIconModule,
     BgShadesComponent,
-    BgShadesBottomComponent
+    BgShadesBottomComponent,
+    TranslateModule
   ],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']

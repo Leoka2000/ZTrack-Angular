@@ -63,3 +63,7 @@ body { margin: 0; background-color:oklch(20.904% 0.00002 271.152); font-family: 
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: black;
+}

@@ -1,39 +1,17 @@
-<div
-  class="flex flex-col relative md:flex-row items-center justify-between md:space-x-12 py-44 max-w-7xl mx-auto"
->
+<div class="flex flex-col md:flex-row items-center justify-between py-44 px-4 overflow-y-clip relative max-w-7xl mx-auto isolate">
+
   <span class="absolute -z-10 -top-60 -right-52 opacity-30">
     <!-- Decorative circle SVG -->
-    <svg
-      width="400"
-      height="400"
-      viewBox="0 0 590 590"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="294.897"
-        cy="294.897"
-        r="293.332"
-        stroke="oklch(86.5% 0.127 207.078)"
-        stroke-width="3.12971"
-      />
-      <path
-        d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z"
-        stroke="oklch(86.5% 0.127 207.078)"
-        stroke-width="3.12971"
-      />
-      <path
-        d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z"
-        stroke="oklch(86.5% 0.127 207.078)"
-        stroke-width="3.12971"
-      />
+    <svg width="400" height="400" viewBox="0 0 590 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="294.897" cy="294.897" r="293.332" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+      <path d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+      <path d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
     </svg>
   </span>
 
   <!-- Text Section -->
-  <div [@fadeInUp]="sectionStates[0]" class="flex-1 mb-8 md:mb-0">
-     <h2 class="text-4xl font-bold mb-6 text-neutral-300" [innerHTML]="'aboutHouse.TITLE' | translate"></h2>
-
+  <div [@fadeInUp]="sectionStates[0]" class="flex-1 mb-12 md:mb-0">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-neutral-300" [innerHTML]="'aboutHouse.TITLE' | translate"></h2>
     <p class="font-semibold mb-2 text-neutral-400" [innerHTML]="'aboutHouse.PARA1' | translate"></p>
     <p class="mb-4 text-neutral-400" [innerHTML]="'aboutHouse.PARA2' | translate"></p>
     <p class="mb-4 text-neutral-400" [innerHTML]="'aboutHouse.PARA3' | translate"></p>
@@ -42,47 +20,19 @@
 
   <!-- Image Section -->
   <div [@fadeInUp]="sectionStates[1]" class="flex-1 flex justify-center">
-    <div
-      class="rounded-3xl border-2 shadow-lg border-neutral-400 overflow-hidden max-w-md w-full"
-      style="
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-          rgba(0, 0, 0, 0.22) 0px 10px 10px;
-      "
-    >
-      <img
-        src="images/zane-epulet.jpg"
-        alt="Company Office"
-        class="w-full h-auto object-cover"
-      />
+    <div class="rounded-3xl border-2 shadow-lg border-neutral-400 overflow-hidden max-w-md w-full"
+         style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
+      <img src="images/zane-epulet.jpg" alt="Company Office" class="w-full h-auto object-cover"/>
     </div>
   </div>
 
   <span class="absolute -z-10 -bottom-60 -left-80 opacity-30">
     <!-- Decorative circle SVG -->
-    <svg
-      width="400"
-      height="400"
-      viewBox="0 0 590 590"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="294.897"
-        cy="294.897"
-        r="293.332"
-        stroke="oklch(86.5% 0.127 207.078)"
-        stroke-width="3.12971"
-      />
-      <path
-        d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z"
-        stroke="oklch(86.5% 0.127 207.078)"
-        stroke-width="3.12971"
-      />
-      <path
-        d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z"
-        stroke="oklch(86.5% 0.127 207.078)"
-        stroke-width="3.12971"
-      />
+    <svg width="400" height="400" viewBox="0 0 590 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="294.897" cy="294.897" r="293.332" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+      <path d="M529.831 294.898C529.831 424.876 424.643 530.24 294.893 530.24C165.143 530.24 59.9549 424.876 59.9549 294.898C59.9549 164.92 165.143 59.557 294.893 59.557C424.643 59.557 529.831 164.92 529.831 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
+      <path d="M469.527 294.898C469.527 395.314 391.286 476.611 294.901 476.611C198.515 476.611 120.275 395.314 120.275 294.898C120.275 194.482 198.515 113.185 294.901 113.185C391.286 113.185 469.527 194.482 469.527 294.898Z" stroke="oklch(86.5% 0.127 207.078)" stroke-width="3.12971"/>
     </svg>
   </span>
+
 </div>

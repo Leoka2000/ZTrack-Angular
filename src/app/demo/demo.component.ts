@@ -10,7 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [CommonModule, TranslateModule, MatSelectModule, MatFormFieldModule],
   template: `
     <div class="mt-4">
-      <mat-form-field class="w-40">
+      <mat-form-field color="accent" class="w-40">
         <mat-label>{{ 'LANGUAGE' | translate }}</mat-label>
         <mat-select [(value)]="selectedLang" (selectionChange)="switchLang($event.value)">
           <mat-option *ngFor="let lang of languages" [value]="lang.code">

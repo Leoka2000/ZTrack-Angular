@@ -4,11 +4,12 @@ import { BgShadesComponent } from '../../../bg-shades/bg-shades.component';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
+import { BgShadesBottomComponent } from "../../../bg-shades-bottom/bg-shades-bottom.component";
 
 @Component({
   selector: 'app-farm-image-about-us',
   standalone: true,
-  imports: [MatIconModule, BgShadesComponent, RouterLink, MatButtonModule, TranslateModule],
+  imports: [MatIconModule, BgShadesComponent, RouterLink, MatButtonModule, TranslateModule, BgShadesBottomComponent],
   templateUrl: './farm-image-about-us.component.html',
   styleUrls: ['./farm-image-about-us.component.scss']
 })
@@ -45,7 +46,7 @@ export class FarmImageAboutUsComponent implements AfterViewInit {
           }
         });
       },
-      { threshold: 0.8 }
+      { threshold: 0.4 }
     );
 
     observer.observe(this.el.nativeElement);
